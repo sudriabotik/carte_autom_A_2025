@@ -212,42 +212,12 @@ void serialusM2M_process()
                     break;
                  
                     
-                      case '5':
-                        //printf("you are here \n");
-                         id1 = serialusM2M.buffer[1];
-                        switch (id1)
-                        { 
-                        case '0': ////////////////////////////////////////////////////////test pomp
-                            test_pompes();
-                            //printf("test pompes \n");
-                            break;
-                            
-                        case '1':
-                            //printf("test pompinettes \n");
-                            test_pompinettes();
-                            break;
-                            
-                        case '2':
-                            test_esc();
-                            //printf("test esc \n");
-                            break;
-                            
-                        case '3':
-                            //printf("test servo \n");
-                            test_servo();
-                            break;
-                           
-                                
-                            
-                        default  :
-                            printf ("Mauvais id1 test autom \n");
-                            break;
-                        }
+                     
                                 
                                       
                                 
                         
-                        break; //break case 5
+                   
                         
                       
                     case '6':
@@ -255,10 +225,7 @@ void serialusM2M_process()
                          id1 = serialusM2M.buffer[1];
                         switch (id1)
                         { 
-                        case '0': ////////////////////////////////////////////////////////test pomp
-                           
-                            printf("initAX \n");
-                            break;
+                        
                             
                         case '1':
                             
@@ -281,7 +248,7 @@ void serialusM2M_process()
                             printf("pomp off \n");
                             break;
                             
-                      
+                      } 
                
                         break; //break case 6
                      
@@ -292,12 +259,12 @@ void serialusM2M_process()
                          id1 = serialusM2M.buffer[1];
                         switch (id1)
                         { 
-                        case '0': ////////////////////////////////////////////////////////test pomp
+                        case '0': ////////////////////////////////////////////////////////
                             InitAx();
                             printf("Init AXDC \n");
                             break;
                             
-                        case '1': ////////////////////////////////////////////////////////test pomp
+                        case '1': //////////////////////////////////////////////////////
                             Approch();
                             printf("approch\n");
                             break;
@@ -616,81 +583,7 @@ int16_t check_id_ax12_m2m(int16_t id)
 }
 
 
-//////////////////////////////////////////////////////////////test autom////////////////////////////////////////////////////////////
 
-void test_pompes(){
-    printf("pomp on");
-    turnOnPump_ARM1();
-    turnOnPump_ARM2();
-    turnOnPump_ARM3();
-    
-    delay_ms(10000);
-   
-    turnOffPump_ARM1();
-    turnOffPump_ARM2();
-    turnOffPump_ARM3();
-    printf("pomp off \n");
-}
-
-void test_pompinettes(){
-    printf("pompinettes on\n");
-    turnOnPump_STOCK1();
-    turnOnPump_STOCK2();
-    turnOnPump_STOCK3();
-    
-    delay_ms(30000);
-    
-    turnOffPump_STOCK1();
-    turnOffPump_STOCK2();
-    turnOffPump_STOCK3(); 
-    printf("pompinettes off \n");
-}
-
-void test_esc(){
-    printf("turbine on\n");
-              int i;
-        for (i=500;i<3000;++i){
-             P1DC1 = (uint16_t) i; 
-             P1DC2 = (uint16_t) i; 
-             P1DC3 = (uint16_t) i; 
-            delay_ms(3);
-      } 
-       printf("turbine full on\n");        
-              delay_ms(5000);
-          
-        for (i=3000;i>499;--i){
-             P1DC1 = (uint16_t) i; 
-             P1DC2 = (uint16_t) i; 
-             P1DC3 = (uint16_t) i; 
-            delay_ms(3);
-       
-      } 
-               printf("turbine off \n");
-}
-
-void test_servo(){
-
-    
-
-    printf("servo 0\n");     
-             setPWMOutput('1',0);
-                     setPWMOutput('2',0);
-                     setPWMOutput('3',0);
-             delay_ms(2000);
-
-
-    printf("servo 100\n");      
-         setPWMOutput('1',100);
-                 setPWMOutput('2',100);
-                 setPWMOutput('3',100);
-             delay_ms(2000);
-
-      
- printf("servo 50 \n");
-       setPWMOutput('1',50);
-                 setPWMOutput('2',50);
-                 setPWMOutput('3',50);
-}
 ////////////////////////////////////////////////autom
 
 
@@ -710,179 +603,6 @@ void _ascenseurSetConsignePourcent(){
     
    
 }
-
-void _woodServo(){
-     int16_t State1 = 0;
-   
-    char charState1[2];
-    
-    
-    charState1[1] = '\0';
-   
-
-    strncpy(charState1, serialusM2M.buffer + 2, 1);
-   
-    
-    State1 = (int16_t) atoi(charState1);
-   
-    
-    if (State1){
-        setPWMOutput('3',50);
-         printf("woodservo on \n");
-    }
-    else{
-        setPWMOutput('3',20);
-        printf("woodservo off \n");
-    }
-    
-   
-}
-
-
-void _stop_turb(){
-    int16_t State1 = 0;
-    int16_t State2 = 0;
-    int16_t State3 = 0;
-     
-    char charState1[2];
-    char charState2[2];
-    char charState3[2];
-    
-    charState1[1] = '\0';
-    charState2[1] = '\0';
-    charState3[1] = '\0';
-
-    strncpy(charState1, serialusM2M.buffer + 2, 1);
-    strncpy(charState2, serialusM2M.buffer + 3, 1);
-    strncpy(charState3, serialusM2M.buffer + 4, 1);
-    
-    State1 = (int16_t) atoi(charState1);
-    State2 = (int16_t) atoi(charState2);
-    State3 = (int16_t) atoi(charState3);
-    
-
-    
-    //insert new stop turbine function 
-    stop_turb(State1,State2,State3);
-    printf("turbine off %d %d %d \n",State1,State2,State3);
-    
-}
-
-
-
-void _destock_plant(){
-     int16_t State1 = 0;
-     int16_t State2 = 0;
-     int16_t State3 = 0;
-     
-    char charState1[2];
-    char charState2[2];
-    char charState3[2];
-    
-    charState1[1] = '\0';
-    charState2[1] = '\0';
-    charState3[1] = '\0';
-
-    strncpy(charState1, serialusM2M.buffer + 2, 1);
-    strncpy(charState2, serialusM2M.buffer + 3, 1);
-    strncpy(charState3, serialusM2M.buffer + 4, 1);
-    
-    State1 = (int16_t) atoi(charState1);
-    State2 = (int16_t) atoi(charState2);
-    State3 = (int16_t) atoi(charState3);
-    
-    
-    //insert new destock 
-    destock_plant(State1,State2,State3);
-    printf("destock %d %d %d \n",State1,State2,State3);
-}
-
-void _stock_plant(){
-     int16_t State1 = 0;
-     int16_t State2 = 0;
-     int16_t State3 = 0;
-     
-    char charState1[2];
-    char charState2[2];
-    char charState3[2];
-    
-    charState1[1] = '\0';
-    charState2[1] = '\0';
-    charState3[1] = '\0';
-
-    strncpy(charState1, serialusM2M.buffer + 2, 1);
-    strncpy(charState2, serialusM2M.buffer + 3, 1);
-    strncpy(charState3, serialusM2M.buffer + 4, 1);
-    
-    State1 = (int16_t) atoi(charState1);
-    State2 = (int16_t) atoi(charState2);
-    State3 = (int16_t) atoi(charState3);
-    
-    
-    //insert new destock 
-    stock_plant(State1,State2,State3);
-    printf("stock %d %d %d \n",State1,State2,State3);
-}
-
-
-void _start_sensor(){
-    
-    serialusM2M.counter_capt = 0;
-    serialusM2M.FLAG_CHECK_CAPT = true;
-    
-}
-
-void _hands_up(){
-    
-    hands_up();
-    printf("hands up\n");
-    
-    
-   
-}
-
-
-void _hands_down(){
-    
-    hands_up();
-    printf("hands down\n");
-    
-    
-   
-}
-
-
-void _depose_jard(){
-     int16_t State1 = 0;
-     int16_t State2 = 0;
-     int16_t State3 = 0;
-     
-    char charState1[2];
-    char charState2[2];
-    char charState3[2];
-    
-    charState1[1] = '\0';
-    charState2[1] = '\0';
-    charState3[1] = '\0';
-
-    strncpy(charState1, serialusM2M.buffer + 2, 1);
-    strncpy(charState2, serialusM2M.buffer + 3, 1);
-    strncpy(charState3, serialusM2M.buffer + 4, 1);
-    
-    State1 = (int16_t) atoi(charState1);
-    State2 = (int16_t) atoi(charState2);
-    State3 = (int16_t) atoi(charState3);
-    
-    
-    //insert new destock 
-    depose_jard(State1,State2,State3);
-    printf("depose jard %d %d %d \n",State1,State2,State3);
-    
-}
-
-
-
-
 
 ////////////////////////////////////////////////////////////////////////////////////serialus func
 bool sontdesdigits(const char *str)

@@ -105,18 +105,10 @@ void __attribute__((__interrupt__, no_auto_psv)) _T4Interrupt(void)
         IEC4bits.QEI2IE = 0;
         
         
-        init_ax();
-        close_servo();
+      
         
         // couper turb
-        
-        P1DC1 = (uint16_t) 0; 
-        
-        P1DC2 = (uint16_t) 0; 
-        
-        P1DC3 = (uint16_t) 0; 
-        
-        
+      
         turnOffPump_ARM1();
 
         turnOffPump_ARM2();
@@ -148,22 +140,7 @@ void __attribute__((__interrupt__, no_auto_psv)) _T4Interrupt(void)
      }
      
      
-    if(serialusM2M.FLAG_CHECK_CAPT == true){
-        
-        serialusM2M.counter_capt++;
-        
-        if(SENSOR_PRESENCE1 && SENSOR_PRESENCE2 && SENSOR_PRESENCE3){
-            
-            serialusM2M.FLAG_CHECK_CAPT = false;
-            readSensors();
-        }
-        
-        if(serialusM2M.counter_capt> TIMEOUT_CAPT){
-            
-            serialusM2M.FLAG_CHECK_CAPT = false;
-            readSensors();
-        }
-    }
+
        
 
     FLAG_TIMER_100ms = 0;        //On clear le flag d'interruption du timer

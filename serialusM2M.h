@@ -60,21 +60,8 @@ void print_ping(uint8_t id);
 void print_position_ax12(uint8_t id, int16_t position);
 void print_erreur_ax12();
         
-void test_pompes();
-void test_pompinettes();
-void test_esc();
-void test_servo();
 
-void _start_sensor();
 void _ascenseurSetConsignePourcent();
-void _woodServo();
-void _stop_turb();
-void _destock_plant();
-void _stock_plant();
-void start_match();
-void _hands_up();
-void _hands_down();
-void _depose_jard();
 
 // Add other function declarations...
 

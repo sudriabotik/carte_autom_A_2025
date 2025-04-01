@@ -19,7 +19,7 @@
 #include "autom.h"
 
 
-void init_AX(){
+void InitAx(){
     ascenseurSetConsignePourcent(3.);
     angle_AX12(IdD,POSDG,VIT_AX,AVEC_ATTENTE);
     angle_AX12(IdM,POSMI,VIT_AX,AVEC_ATTENTE);
