@@ -86,7 +86,7 @@ static double ascenseurPID(double consigne, double mesure) {
     asc_pid.erreur_precedente = erreur;
     double commande = asc_pid.Kp * erreur + asc_pid.Ki * asc_pid.erreur_integree + asc_pid.Kd * derive;
     //commande=(commande/asc_distance_totale)*100;
-    return clamp(commande, -30.0, 30.0);
+    return clamp(commande, -60.0, 60.0);
 }
 
 // PID pour le maintien (brake)

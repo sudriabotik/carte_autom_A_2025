@@ -256,7 +256,7 @@ void serialusM2M_process()
                         switch (id1)
                         { 
                         case '0': ////////////////////////////////////////////////////////test pomp
-                            init_ax();
+                           
                             printf("initAX \n");
                             break;
                             
@@ -281,50 +281,7 @@ void serialusM2M_process()
                             printf("pomp off \n");
                             break;
                             
-                       case '4':
-                            
-                            open_servo();
-                             printf("open servo \n");
-                            break;
-                           
-                        case '5':
-                            
-                            close_servo();
-                             printf("close servo \n");
-                            break;
-                        
-                        case '6':
-                            
-                            _stock_plant();
-                            
-                            break;
-                            
-                            
-                        case '7':
-                            
-                             _destock_plant();
-              
-                            break;
-                           
-                            
-                        case '8':
-                            
-                             _start_sensor();
-                            // printf("captint to be coded and print removed \n");
-                            break;
-                           
-                        case '9':
-                            start_match();
-                            break;
-                            
-                                    
-                            
-                        default  :
-                            printf ("Mauvais id1  autom \n");
-                            break;
-                        }
-                                
-                                      
+                      
                
                         break; //break case 6
                      
@@ -336,33 +293,31 @@ void serialusM2M_process()
                         switch (id1)
                         { 
                         case '0': ////////////////////////////////////////////////////////test pomp
-                            turnOnPump_ARM1();
-                            turnOnPump_ARM2();
-                            turnOnPump_ARM3();
-                            printf("pump on\n");
+                            InitAx();
+                            printf("Init AXDC \n");
                             break;
                             
                         case '1': ////////////////////////////////////////////////////////test pomp
-                            turnOffPump_ARM1();
-                            turnOffPump_ARM2();
-                            turnOffPump_ARM3();
-                            printf("pump off\n");
+                            Approch();
+                            printf("approch\n");
                             break;
                         
                             
                         case '2':
                             
-                            _hands_up();
+                            Hold();
+                            printf("Hold\n");
                             break;
                             
                             
                         case '3':
-                            _depose_jard();
+                            Construct();
+                            printf("construct\n");
                             break;
                                 
                         case '4':
-                            
-                            _hands_down();
+                            Drop();
+                            printf("Drop\n");
                             break;              
            
                         default  :
