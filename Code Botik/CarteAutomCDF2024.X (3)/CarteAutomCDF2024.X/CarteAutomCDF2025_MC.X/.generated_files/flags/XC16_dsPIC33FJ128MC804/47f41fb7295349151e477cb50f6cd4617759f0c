@@ -1,0 +1,1 @@
+ -c -mcpu=$(MP_PROCESSOR_OPTION)      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_XC16_dsPIC33FJ128MC804=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -fno-short-double -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"D:\Code Botik\CarteAutomCDF2024.X (3)\CarteAutomCDF2024.X\CarteAutomCDF2025_MC.X\acenseur_asserv.c
