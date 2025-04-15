@@ -3,19 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/pmw.c</file>
-            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/codeurs.h</file>
-            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/acenseur_asserv.c</file>
-            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/codeurs.c</file>
-            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/serialusM2M.c</file>
-            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/.git/config</file>
-            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/pmw.h</file>
             <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/main.c</file>
-            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/gestion_AX12.c</file>
+            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/acenseur_asserv.c</file>
             <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/serialusM2M.h</file>
+            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/Config_robots.h</file>
+            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/system.c</file>
             <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/asserv.c</file>
+            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/autom.h</file>
+            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/serialusM2M.c</file>
             <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/interrupts.c</file>
-            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/ascenseur_asserv.h</file>
+            <file>file:/C:/botik%20code/CarteAutomCDF2025_MC.X/autom.c</file>
         </group>
     </open-files>
 </project-private>
