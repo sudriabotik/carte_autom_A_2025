@@ -42,7 +42,7 @@ extern "C" {
  /**************************************************************************/
     /****************************** ODOMETRIE *********************************/
     /**************************************************************************/
-    #define _ENTRAXE_MM                302.32//302.46 //JAMES //174.7// 173.25// 173.75 vincent //170.75 //Pas assez tourné -> augmenter entraxe
+    #define _ENTRAXE_MM                302.32//302.46 //JAMES tt //174.7// 173.25// 173.75 vincent //170.75 //Pas assez tourné -> augmenter entraxe
     #define _DIAMETRE_ROUE_CODEUSE       63.52//63.0//JAMES//51.9715   //51.9715     //Toujours dans le sens de l'erreur : aller plus loin = diminuer D
     #define _PERIMETRE_ROUE_MM         (_DIAMETRE_ROUE_CODEUSE*_Pi)  //JAMES//196.0 //195.4 //194.91//195.1 Si distance parcourue trop grande -> Augmenter la taille des roues
   
