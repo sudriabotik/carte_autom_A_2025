@@ -22,7 +22,7 @@ extern "C"
 
 
 
-#define VIT_AX 200
+#define VIT_AX 300
 #define DELAY_AUTOM 1000
 
 
@@ -43,17 +43,21 @@ extern "C"
 
 #undef FACE_A
 
-#define IdD 5 
+#define IdD 5
+
+
 #define IdM 6
 #define IdG 7
 
 #define POSDG 303  //position droit grab
-#define POSDT 540  //position droit transit
+#define POSDT 530  //position droit transit
 #define POSDD 103  //position droit drop
+     
+
 
 #define POSMI 525  //position middle idle
 #define POSMG 800  //position middle grab
-#define POSMT 838  //position middile transit
+#define POSMT 835  //position middile transit
 #define POSMD 835  //position middle drop
 
 #define POSGG 413  //position gauche grab

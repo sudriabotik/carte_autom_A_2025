@@ -28,7 +28,7 @@ void InitAx(){
 }
 
 void Approch(){
-    ascenseurSetConsignePourcent(5.);
+    ascenseurSetConsignePourcent(5.9);
     angle_AX12(IdD,POSDG,VIT_AX,AVEC_ATTENTE);
     angle_AX12(IdM,POSMG,VIT_AX,AVEC_ATTENTE);
     angle_AX12(IdG,POSGG,VIT_AX,AVEC_ATTENTE);
@@ -43,7 +43,11 @@ void Hold(){
     angle_AX12(IdM,POSMT,VIT_AX,SANS_ATTENTE);
     angle_AX12(IdM,POSMT,VIT_AX,SANS_ATTENTE);
     angle_AX12(IdM,POSMT,VIT_AX,SANS_ATTENTE);
-
+    delay_ms(800);
+    angle_AX12(IdM,POSMT-10,VIT_AX,SANS_ATTENTE);
+    angle_AX12(IdM,POSMT-10,VIT_AX,SANS_ATTENTE);
+    angle_AX12(IdM,POSMT-10,VIT_AX,SANS_ATTENTE);
+    angle_AX12(IdM,POSMT-10,VIT_AX,SANS_ATTENTE);   
 }
 
 void Construct(){
@@ -51,7 +55,7 @@ void Construct(){
     angle_AX12(IdG,POSGT,VIT_AX,AVEC_ATTENTE);
     lancer_autom_AX12();
     delay_ms(800);
-    ascenseurSetConsignePourcent(98.5);
+    ascenseurSetConsignePourcent(97.);
     delay_ms(3800);
     angle_AX12(IdD,POSDD,VIT_AX,AVEC_ATTENTE);
     angle_AX12(IdG,POSGD,VIT_AX,AVEC_ATTENTE);

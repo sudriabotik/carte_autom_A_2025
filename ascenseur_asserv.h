@@ -77,7 +77,7 @@ extern volatile homing_state_t gHomingState;        // État de la phase homing
 /*---------------------------------------------------------------
   Macro pour la vitesse utilisée en homing (en % de PWM par exemple)
   ---------------------------------------------------------------*/
-#define HOMING_SPEED 20
+#define HOMING_SPEED 30
 
 /*---------------------------------------------------------------
   Prototypes des fonctions publiques
