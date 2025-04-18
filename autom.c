@@ -51,10 +51,10 @@ void Hold(){
 }
 
 void Construct(){
-    angle_AX12(IdD,POSDT,VIT_AX,AVEC_ATTENTE);
-    angle_AX12(IdG,POSGT,VIT_AX,AVEC_ATTENTE);
+    angle_AX12(IdD,POSDT,VIT_AX-50,AVEC_ATTENTE);
+    angle_AX12(IdG,POSGT,VIT_AX-50,AVEC_ATTENTE);
     lancer_autom_AX12();
-    delay_ms(800);
+    delay_ms(1000);
     ascenseurSetConsignePourcent(97.);
     delay_ms(3800);
     angle_AX12(IdD,POSDD,VIT_AX,AVEC_ATTENTE);
