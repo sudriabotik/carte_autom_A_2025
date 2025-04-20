@@ -247,7 +247,10 @@ void serialusM2M_process()
                             turnOffPump_ARM3();
                             printf("pomp off \n");
                             break;
-                            
+                        
+                        case '9' :
+                            start_match();
+                            break;
                       } 
                
                         break; //break case 6

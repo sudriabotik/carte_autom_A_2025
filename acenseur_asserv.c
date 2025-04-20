@@ -333,6 +333,7 @@ void homingAscenseurTask(void) {
              
             if (!consigne_set) {
                 ascenseurSetConsignePourcent(2.);
+           
                 consigne_set = true;
             }
             

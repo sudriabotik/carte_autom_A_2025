@@ -59,7 +59,7 @@ int16_t check_id_ax12_m2m(int16_t id);
 void print_ping(uint8_t id);
 void print_position_ax12(uint8_t id, int16_t position);
 void print_erreur_ax12();
-        
+void start_match();
 
 void _ascenseurSetConsignePourcent();
 

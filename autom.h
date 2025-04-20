@@ -56,12 +56,12 @@ extern "C"
 
 
 #define POSMI 525  //position middle idle
-#define POSMG 800  //position middle grab
+#define POSMG 780  //position middle grab
 #define POSMT 835  //position middile transit
 #define POSMD 835  //position middle drop
 
 #define POSGG 413  //position gauche grab
-#define POSGT 135  //position gauche transit
+#define POSGT 140  //position gauche transit
 #define POSGD 610  //position gauche drop
 
 

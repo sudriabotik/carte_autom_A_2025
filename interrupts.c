@@ -91,6 +91,19 @@ void __attribute__((__interrupt__, no_auto_psv)) _T4Interrupt(void)
     
      if (CPT_TEMPS_MATCH.t_ms >= 100000UL)
     {
+        turnOffPump_ARM1();
+
+        turnOffPump_ARM2();
+
+        turnOffPump_ARM3();
+
+        turnOffPump_STOCK1();
+
+        turnOffPump_STOCK2();
+
+        turnOffPump_STOCK3();
+        
+         angle_AX12(IdM,POSMG,VIT_AX,AVEC_ATTENTE);
          //put herer the funcs pls
          PORTCbits.RC5 = 0;
 
@@ -109,18 +122,7 @@ void __attribute__((__interrupt__, no_auto_psv)) _T4Interrupt(void)
         
         // couper turb
       
-        turnOffPump_ARM1();
 
-        turnOffPump_ARM2();
-
-        turnOffPump_ARM3();
-
-        turnOffPump_STOCK1();
-
-        turnOffPump_STOCK2();
-
-        turnOffPump_STOCK3();
-        
         
         
         IPC7bits.U2TXIP	= 7;
