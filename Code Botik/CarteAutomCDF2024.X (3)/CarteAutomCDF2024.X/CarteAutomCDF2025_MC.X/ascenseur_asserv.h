@@ -17,7 +17,8 @@ typedef enum {
     ASC_STATE_CRUISE,     // Vitesse constante
     ASC_STATE_DECEL,      // Décélération
     ASC_STATE_DONE,       // Position finale atteinte (immobile)
-    ASC_STATE_BRAKE       // Maintien (PID brake)
+    ASC_STATE_BRAKE,      // Maintien (PID brake)
+    ASC_STATE_BLOCKED     // Bloque sur endswitch
 } asc_state_t;
 
 /*---------------------------------------------------------------
@@ -74,10 +75,11 @@ extern volatile double topPos;         // Position (ticks) de la butée haute
 extern volatile double ascenseur_distance_totale; // Distance mesurée entre butées
 extern volatile homing_state_t gHomingState;        // État de la phase homing
 
+
 /*---------------------------------------------------------------
   Macro pour la vitesse utilisée en homing (en % de PWM par exemple)
   ---------------------------------------------------------------*/
-#define HOMING_SPEED 20
+
 
 /*---------------------------------------------------------------
   Prototypes des fonctions publiques
@@ -128,6 +130,17 @@ void homingAscenseurTask(void);
  * @brief Retourne une valeur lue sur le codeur (pour le homing).
  */
 double getCodeurAscenseur(void);
+
+
+
+void debug_autom(void);
+
+
+/* ---- getters d?état pour Serialus ---- */
+uint8_t ascenseurGetState(void);       /* ASC_STATE_xxx   */
+uint8_t ascenseurGetHomeState(void);   /* HOMING_xxx      */
+
+
 
 #ifdef __cplusplus
 }

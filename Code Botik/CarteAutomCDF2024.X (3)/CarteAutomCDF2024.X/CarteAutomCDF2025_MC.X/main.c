@@ -17,7 +17,8 @@
 #include "system.h"        /* System funct/params, like osc/peripheral config */
 #include "user.h"          /* User funct/params, such as InitApp              */
 #include "pump.h"
-#include "ascenseur_asserv.h" 
+#include "ascenseur_asserv.h"
+#include "ascenseur_params.h"
 
 
 /******************************************************************************/
@@ -80,36 +81,38 @@ volatile __attribute__((near)) _compteur_temps_match CPT_TEMPS_MATCH;
 
 /******************************************************************************/
 /* Main Program                                                               */
+
 /******************************************************************************/
 
 
 
 
 
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv) {
 
-     
+
     /* Initialize IO ports and peripherals */
-   // InitApp();
-    
+    // InitApp();
+
     init_system();
     ascenseurAsservInit();
     TIMER_200ms = ACTIVE;
     delay_ms(500);
-    homingAscenseurStart();
-   
-    printf("------------------init done------------------------\n");// initialise variables PID, rampes, etc. 
-  
-  
-    while(1){
+    
+
+    //printf("------------------init done------------------------\n"); // initialise variables PID, rampes, etc. 
+
+
+    while (1) {
         if (gHomingState == HOMING_DONE) {
-            ascenseurSetConsignePourcent(50.0);
+            
+            ascenseurSetConsignePourcent(55.0);
+            
         }
     };
-  
 
-   
-  return 0;
+
+
+    return 0;
 }
-    
+

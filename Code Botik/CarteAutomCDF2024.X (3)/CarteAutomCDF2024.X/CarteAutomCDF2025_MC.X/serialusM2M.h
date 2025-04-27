@@ -13,9 +13,17 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "system.h"
+#include "ascenseur_params.h"         
 
 #define BUFFER_SIZE 512 //
 #define TIMEOUT_CAPT 20 // =1s -> 5*200ms=1s
+
+/* index utilisés par la commande 3 1 idx \r */
+#define ASC_STATE_IDX         0   /* état principal */
+#define ASC_HOME_STATE_IDX    1   /* état homing    */
+
+
+
 
 typedef struct {
     bool clignotement_en_cours;
@@ -59,22 +67,16 @@ int16_t check_id_ax12_m2m(int16_t id);
 void print_ping(uint8_t id);
 void print_position_ax12(uint8_t id, int16_t position);
 void print_erreur_ax12();
-        
-void test_pompes();
-void test_pompinettes();
-void test_esc();
-void test_servo();
-
-void _start_sensor();
-void _start_turb();
-void _read_sensor_int();
-void _stop_turb();
-void _destock_plant();
-void _stock_plant();
 void start_match();
-void _hands_up();
-void _hands_down();
-void _depose_jard();
+
+void _ascenseurSetConsignePourcent();
+
+
+/* --- nouveaux prototypes --- */
+//void pid_cmd_serialus(void);   /* id0 = '1' */
+
+void asc_set_consigne(uint8_t idx, long value);
+long asc_get_consigne(uint8_t idx);
 
 // Add other function declarations...
 

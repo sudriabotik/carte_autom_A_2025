@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c system.c traps.c user.c interrupts.c gestion_AX12.c Uart_1.c pump.c pmw.c serialusM2M.c autom.c asserv.c codeurs.c acenseur_asserv.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c system.c traps.c user.c interrupts.c gestion_AX12.c Uart_1.c pump.c pmw.c serialusM2M.c autom.c asserv.c codeurs.c ascenseur_params.c ascenseur_asserv.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/system.o ${OBJECTDIR}/traps.o ${OBJECTDIR}/user.o ${OBJECTDIR}/interrupts.o ${OBJECTDIR}/gestion_AX12.o ${OBJECTDIR}/Uart_1.o ${OBJECTDIR}/pump.o ${OBJECTDIR}/pmw.o ${OBJECTDIR}/serialusM2M.o ${OBJECTDIR}/autom.o ${OBJECTDIR}/asserv.o ${OBJECTDIR}/codeurs.o ${OBJECTDIR}/acenseur_asserv.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/system.o.d ${OBJECTDIR}/traps.o.d ${OBJECTDIR}/user.o.d ${OBJECTDIR}/interrupts.o.d ${OBJECTDIR}/gestion_AX12.o.d ${OBJECTDIR}/Uart_1.o.d ${OBJECTDIR}/pump.o.d ${OBJECTDIR}/pmw.o.d ${OBJECTDIR}/serialusM2M.o.d ${OBJECTDIR}/autom.o.d ${OBJECTDIR}/asserv.o.d ${OBJECTDIR}/codeurs.o.d ${OBJECTDIR}/acenseur_asserv.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/system.o ${OBJECTDIR}/traps.o ${OBJECTDIR}/user.o ${OBJECTDIR}/interrupts.o ${OBJECTDIR}/gestion_AX12.o ${OBJECTDIR}/Uart_1.o ${OBJECTDIR}/pump.o ${OBJECTDIR}/pmw.o ${OBJECTDIR}/serialusM2M.o ${OBJECTDIR}/autom.o ${OBJECTDIR}/asserv.o ${OBJECTDIR}/codeurs.o ${OBJECTDIR}/ascenseur_params.o ${OBJECTDIR}/ascenseur_asserv.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/system.o.d ${OBJECTDIR}/traps.o.d ${OBJECTDIR}/user.o.d ${OBJECTDIR}/interrupts.o.d ${OBJECTDIR}/gestion_AX12.o.d ${OBJECTDIR}/Uart_1.o.d ${OBJECTDIR}/pump.o.d ${OBJECTDIR}/pmw.o.d ${OBJECTDIR}/serialusM2M.o.d ${OBJECTDIR}/autom.o.d ${OBJECTDIR}/asserv.o.d ${OBJECTDIR}/codeurs.o.d ${OBJECTDIR}/ascenseur_params.o.d ${OBJECTDIR}/ascenseur_asserv.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/system.o ${OBJECTDIR}/traps.o ${OBJECTDIR}/user.o ${OBJECTDIR}/interrupts.o ${OBJECTDIR}/gestion_AX12.o ${OBJECTDIR}/Uart_1.o ${OBJECTDIR}/pump.o ${OBJECTDIR}/pmw.o ${OBJECTDIR}/serialusM2M.o ${OBJECTDIR}/autom.o ${OBJECTDIR}/asserv.o ${OBJECTDIR}/codeurs.o ${OBJECTDIR}/acenseur_asserv.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/system.o ${OBJECTDIR}/traps.o ${OBJECTDIR}/user.o ${OBJECTDIR}/interrupts.o ${OBJECTDIR}/gestion_AX12.o ${OBJECTDIR}/Uart_1.o ${OBJECTDIR}/pump.o ${OBJECTDIR}/pmw.o ${OBJECTDIR}/serialusM2M.o ${OBJECTDIR}/autom.o ${OBJECTDIR}/asserv.o ${OBJECTDIR}/codeurs.o ${OBJECTDIR}/ascenseur_params.o ${OBJECTDIR}/ascenseur_asserv.o
 
 # Source Files
-SOURCEFILES=main.c system.c traps.c user.c interrupts.c gestion_AX12.c Uart_1.c pump.c pmw.c serialusM2M.c autom.c asserv.c codeurs.c acenseur_asserv.c
+SOURCEFILES=main.c system.c traps.c user.c interrupts.c gestion_AX12.c Uart_1.c pump.c pmw.c serialusM2M.c autom.c asserv.c codeurs.c ascenseur_params.c ascenseur_asserv.c
 
 
 
@@ -173,11 +173,17 @@ ${OBJECTDIR}/codeurs.o: codeurs.c  .generated_files/flags/XC16_dsPIC33FJ128MC804
 	@${RM} ${OBJECTDIR}/codeurs.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  codeurs.c  -o ${OBJECTDIR}/codeurs.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/codeurs.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_XC16_dsPIC33FJ128MC804=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -fno-short-double -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/acenseur_asserv.o: acenseur_asserv.c  .generated_files/flags/XC16_dsPIC33FJ128MC804/47f41fb7295349151e477cb50f6cd4617759f0c .generated_files/flags/XC16_dsPIC33FJ128MC804/c4f6713bfdb485188cedd0b1cd0fbc22c4c1678f
+${OBJECTDIR}/ascenseur_params.o: ascenseur_params.c  .generated_files/flags/XC16_dsPIC33FJ128MC804/ef7b3fb73629771c619d1e882b082a8a48c8552a .generated_files/flags/XC16_dsPIC33FJ128MC804/c4f6713bfdb485188cedd0b1cd0fbc22c4c1678f
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/acenseur_asserv.o.d 
-	@${RM} ${OBJECTDIR}/acenseur_asserv.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  acenseur_asserv.c  -o ${OBJECTDIR}/acenseur_asserv.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/acenseur_asserv.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_XC16_dsPIC33FJ128MC804=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -fno-short-double -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/ascenseur_params.o.d 
+	@${RM} ${OBJECTDIR}/ascenseur_params.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ascenseur_params.c  -o ${OBJECTDIR}/ascenseur_params.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ascenseur_params.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_XC16_dsPIC33FJ128MC804=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -fno-short-double -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/ascenseur_asserv.o: ascenseur_asserv.c  .generated_files/flags/XC16_dsPIC33FJ128MC804/adf11e03b19618b6b9d44e427b2790e8c342a7e0 .generated_files/flags/XC16_dsPIC33FJ128MC804/c4f6713bfdb485188cedd0b1cd0fbc22c4c1678f
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ascenseur_asserv.o.d 
+	@${RM} ${OBJECTDIR}/ascenseur_asserv.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ascenseur_asserv.c  -o ${OBJECTDIR}/ascenseur_asserv.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ascenseur_asserv.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_XC16_dsPIC33FJ128MC804=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -fno-short-double -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 else
 ${OBJECTDIR}/main.o: main.c  .generated_files/flags/XC16_dsPIC33FJ128MC804/d4df0a9babca192e4cc26449c064ef0089eba719 .generated_files/flags/XC16_dsPIC33FJ128MC804/c4f6713bfdb485188cedd0b1cd0fbc22c4c1678f
@@ -258,11 +264,17 @@ ${OBJECTDIR}/codeurs.o: codeurs.c  .generated_files/flags/XC16_dsPIC33FJ128MC804
 	@${RM} ${OBJECTDIR}/codeurs.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  codeurs.c  -o ${OBJECTDIR}/codeurs.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/codeurs.o.d"        -g -omf=elf -DXPRJ_XC16_dsPIC33FJ128MC804=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -fno-short-double -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/acenseur_asserv.o: acenseur_asserv.c  .generated_files/flags/XC16_dsPIC33FJ128MC804/f3c3dc10b09d363b8c4ad8eb9488fe2478911e0d .generated_files/flags/XC16_dsPIC33FJ128MC804/c4f6713bfdb485188cedd0b1cd0fbc22c4c1678f
+${OBJECTDIR}/ascenseur_params.o: ascenseur_params.c  .generated_files/flags/XC16_dsPIC33FJ128MC804/b313009e68c81461cd1c34da82d1d504e4c959 .generated_files/flags/XC16_dsPIC33FJ128MC804/c4f6713bfdb485188cedd0b1cd0fbc22c4c1678f
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/acenseur_asserv.o.d 
-	@${RM} ${OBJECTDIR}/acenseur_asserv.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  acenseur_asserv.c  -o ${OBJECTDIR}/acenseur_asserv.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/acenseur_asserv.o.d"        -g -omf=elf -DXPRJ_XC16_dsPIC33FJ128MC804=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -fno-short-double -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/ascenseur_params.o.d 
+	@${RM} ${OBJECTDIR}/ascenseur_params.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ascenseur_params.c  -o ${OBJECTDIR}/ascenseur_params.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ascenseur_params.o.d"        -g -omf=elf -DXPRJ_XC16_dsPIC33FJ128MC804=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -fno-short-double -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/ascenseur_asserv.o: ascenseur_asserv.c  .generated_files/flags/XC16_dsPIC33FJ128MC804/5da5d44f32f5bdf2e94ec79e418db3edb9483428 .generated_files/flags/XC16_dsPIC33FJ128MC804/c4f6713bfdb485188cedd0b1cd0fbc22c4c1678f
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ascenseur_asserv.o.d 
+	@${RM} ${OBJECTDIR}/ascenseur_asserv.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ascenseur_asserv.c  -o ${OBJECTDIR}/ascenseur_asserv.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ascenseur_asserv.o.d"        -g -omf=elf -DXPRJ_XC16_dsPIC33FJ128MC804=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -fno-short-double -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 
