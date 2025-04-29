@@ -7,7 +7,7 @@ Command:
   -p33FJ128MC804 \
   --mdfp=D:/Microchip/packs/Microchip/dsPIC33F-GP-MC_DFP/1.3.64/xc16 \
   -o \
-  dist/XC16_dsPIC33FJ128MC804/production/CarteAutomCDF2025_MC.X.production.elf \
+  dist/XC16_dsPIC33FJ128MC804/debug/CarteAutomCDF2025_MC.X.debug.elf \
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/.. \
   -LD:/Microchip/packs/Microchip/dsPIC33F-GP-MC_DFP/1.3.64/xc16/bin/../support/PIC24H/gld \
   -LD:/Microchip/packs/Microchip/dsPIC33F-GP-MC_DFP/1.3.64/xc16/bin/../support/dsPIC33F/gld \
@@ -19,22 +19,25 @@ Command:
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33C/gld \
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33E/gld \
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33F/gld \
-  build/XC16_dsPIC33FJ128MC804/production/main.o \
-  build/XC16_dsPIC33FJ128MC804/production/system.o \
-  build/XC16_dsPIC33FJ128MC804/production/traps.o \
-  build/XC16_dsPIC33FJ128MC804/production/user.o \
-  build/XC16_dsPIC33FJ128MC804/production/interrupts.o \
-  build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o \
-  build/XC16_dsPIC33FJ128MC804/production/Uart_1.o \
-  build/XC16_dsPIC33FJ128MC804/production/pump.o \
-  build/XC16_dsPIC33FJ128MC804/production/pmw.o \
-  build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o \
-  build/XC16_dsPIC33FJ128MC804/production/autom.o \
-  build/XC16_dsPIC33FJ128MC804/production/asserv.o \
-  build/XC16_dsPIC33FJ128MC804/production/codeurs.o \
-  build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o \
-  build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o \
+  build/XC16_dsPIC33FJ128MC804/debug/main.o \
+  build/XC16_dsPIC33FJ128MC804/debug/system.o \
+  build/XC16_dsPIC33FJ128MC804/debug/traps.o \
+  build/XC16_dsPIC33FJ128MC804/debug/user.o \
+  build/XC16_dsPIC33FJ128MC804/debug/interrupts.o \
+  build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o \
+  build/XC16_dsPIC33FJ128MC804/debug/Uart_1.o \
+  build/XC16_dsPIC33FJ128MC804/debug/pump.o \
+  build/XC16_dsPIC33FJ128MC804/debug/pmw.o \
+  build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o \
+  build/XC16_dsPIC33FJ128MC804/debug/autom.o \
+  build/XC16_dsPIC33FJ128MC804/debug/asserv.o \
+  build/XC16_dsPIC33FJ128MC804/debug/codeurs.o \
+  build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o \
+  build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o \
   --defsym=__MPLAB_BUILD=1 \
+  --defsym=__MPLAB_DEBUG=1 \
+  --defsym=__DEBUG=1 \
+  --defsym=__MPLAB_DEBUGGER_SIMULATOR=1 \
   -Tp33FJ128MC804.gld.00 \
   --stack=16 \
   --check-sections \
@@ -47,9 +50,9 @@ Command:
   --stackguard=16 \
   --no-force-link \
   --smart-io \
-  -Map=dist/XC16_dsPIC33FJ128MC804/production/CarteAutomCDF2025_MC.X.production.map \
+  -Map=dist/XC16_dsPIC33FJ128MC804/debug/CarteAutomCDF2025_MC.X.debug.map \
   --memorysummary \
-  dist/XC16_dsPIC33FJ128MC804/production/memoryfile.xml \
+  dist/XC16_dsPIC33FJ128MC804/debug/memoryfile.xml \
   -start-group \
   --library=c99-pic30-elf \
   --library=m-elf \
@@ -67,47 +70,47 @@ c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normal.Meo)
                               (__crt_start_mode_normal)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32.Meo)
-                              build/XC16_dsPIC33FJ128MC804/production/main.o (___delay32)
+                              build/XC16_dsPIC33FJ128MC804/debug/main.o (___delay32)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/asserv.o (___eqdf2)
+                              build/XC16_dsPIC33FJ128MC804/debug/asserv.o (___eqdf2)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dgtge.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/pmw.o (___gtdf2)
+                              build/XC16_dsPIC33FJ128MC804/debug/pmw.o (___gtdf2)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o (___extendsfdf2)
+                              build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o (___extendsfdf2)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixdfsi.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o (_(float, int, long long, double, float, short, int))
+                              build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o (_(float, int, long long, double, float, short, int))
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o (_(float, int, long long, short, float, short, int))
+                              build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o (_(float, int, long long, short, float, short, int))
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixunsdfdi.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/asserv.o (___fixunsdfdi)
+                              build/XC16_dsPIC33FJ128MC804/debug/asserv.o (___fixunsdfdi)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixunsdfsi.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/pmw.o (___fixunsdfsi)
+                              build/XC16_dsPIC33FJ128MC804/debug/pmw.o (___fixunsdfsi)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsidf.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o (___floatsidf)
+                              build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o (___floatsidf)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o (___floatsisf)
+                              build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o (___floatsisf)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatunsidf.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o (___floatunsidf)
+                              build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o (___floatunsidf)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatunsisf.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/asserv.o (___floatunsisf)
+                              build/XC16_dsPIC33FJ128MC804/debug/asserv.o (___floatunsisf)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.XX_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.XX_o) (__funpack)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(truncdfsf.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o (___truncdfsf2)
+                              build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o (___truncdfsf2)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpadd.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/asserv.o (___adddf3)
+                              build/XC16_dsPIC33FJ128MC804/debug/asserv.o (___adddf3)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpdiv.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o (___divdf3)
+                              build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o (___divdf3)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpmul.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o (___muldf3)
+                              build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o (___muldf3)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpsubs.XX_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpmul.XX_o) (__dnsrnd)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o (___subsf3)
+                              build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o (___subsf3)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o (___divsf3)
+                              build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o (___divsf3)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.XX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o (___mulsf3)
+                              build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o (___mulsf3)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.XX_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.XX_o) (__dnrmpackf)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.XX_o)
@@ -121,7 +124,7 @@ c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spack
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.XX_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.XX_o) (__unpackf)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divmoddi3.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/Uart_1.o (___divdi3)
+                              build/XC16_dsPIC33FJ128MC804/debug/Uart_1.o (___divdi3)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dcompare.XX_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o) (__dcompare)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dtype.XX_o)
@@ -147,15 +150,15 @@ c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpack
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpropagateNaN.XX_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dunpack2.XX_o) (__dPropagateNaN)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(atan2.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/asserv.o (_atan2)
+                              build/XC16_dsPIC33FJ128MC804/debug/asserv.o (_atan2)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(cos.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/asserv.o (_cos)
+                              build/XC16_dsPIC33FJ128MC804/debug/asserv.o (_cos)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(fabs.dXX_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(atan2.dXX_o) (_fabs)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(sin.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/asserv.o (_sin)
+                              build/XC16_dsPIC33FJ128MC804/debug/asserv.o (_sin)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(sqrt.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/asserv.o (_sqrt)
+                              build/XC16_dsPIC33FJ128MC804/debug/asserv.o (_sqrt)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(__cos.dXX_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(cos.dXX_o) (___cos)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(__rem_pio2.dXX_o)
@@ -167,25 +170,25 @@ c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(atan.dXX_o)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__errno_location.dXX_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(sqrt.dXX_o) (___errno_val)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__sio_printf_dfosux.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o (__dprintf_cdfFnopsuxX)
+                              build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o (__dprintf_cdfFnopsuxX)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__sio_printf_dfoux.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o (__dprintf_cdfFnopuxX)
+                              build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o (__dprintf_cdfFnopuxX)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__sio_printf_doux.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o (__dprintf_cdnopuxX)
+                              build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o (__dprintf_cdnopuxX)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(atof.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o (_atof)
+                              build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o (_atof)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(atoi.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o (_atoi)
+                              build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o (_atoi)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(atol.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o (_atol)
+                              build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o (_atol)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(putchar.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o (_putchar)
+                              build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o (_putchar)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(puts.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o (_puts)
+                              build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o (_puts)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(stdout.dXX_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__sio_printf_dfosux.dXX_o) (__stdout)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(strncpy.dXX_o)
-                              build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o (_strncpy)
+                              build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o (_strncpy)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(strtod.dXX_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(atof.dXX_o) (_strtod)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_d.dXX_o)
@@ -327,11 +330,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 .const                      0x582e               0x2d2           0x43b  (1083)
 .text                       0x5b00              0x5294          0x7bde  (31710)
 .dinit                      0xad94               0x274           0x3ae  (942)
-.text                       0xb008               0x70c           0xa92  (2706)
-.init.delay32               0xb714                0x1c            0x2a  (42)
-.text                       0xb730                 0x6             0x9  (9)
+.text                       0xb008               0x6e6           0xa59  (2649)
+.init.delay32               0xb6ee                0x1c            0x2a  (42)
+.text                       0xb70a                0x1c            0x2a  (42)
 
-                 Total "program" memory used (bytes):        0x10fd1  (69585) 52%
+                 Total "program" memory used (bytes):        0x10fb9  (69561) 52%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x4000]
@@ -858,9 +861,9 @@ External Symbols in Program Memory (by address):
                   0x00b6d6                  _turnOffPump_STOCK1
                   0x00b6de                  _turnOffPump_STOCK2
                   0x00b6e6                  _turnOffPump_STOCK3
-                  0x00b6ee                  _main
-                  0x00b714                  ___delay32
-                  0x00b730                  _InitApp
+                  0x00b6ee                  ___delay32
+                  0x00b70a                  _main
+                  0x00b720                  _InitApp
                   0xf80000                  __FBS.sec
                   0xf80002                  __FSS.sec
                   0xf80004                  __FGS.sec
@@ -884,7 +887,7 @@ External Symbols in Program Memory (by name):
                   0x00b354                  _Construct
                   0x00b3f8                  _Drop
                   0x00b2f8                  _Hold
-                  0x00b730                  _InitApp
+                  0x00b720                  _InitApp
                   0x00b248                  _InitAx
                   0x00b008                  _InitUART
                   0x005f36                  _MM_TO_TICK
@@ -922,7 +925,7 @@ External Symbols in Program Memory (by name):
                   0x000be2                  ___addsf3x
                   0x001e58                  ___cos
                   0x0032c4                  ___cvt_u
-                  0x00b714                  ___delay32
+                  0x00b6ee                  ___delay32
                   0x000830                  ___divdf3
                   0x0013c2                  ___divdi3
                   0x000dac                  ___divsf3
@@ -1114,7 +1117,7 @@ External Symbols in Program Memory (by name):
                   0x00a512                  _init_system
                   0x009482                  _lancer_autom_AX12
                   0x009aa2                  _lecture_position_AX12
-                  0x00b6ee                  _main
+                  0x00b70a                  _main
                   0x004d66                  _memcpy
                   0x004d74                  _memset
                   0x0095a2                  _mode_rotation_AX12
@@ -1200,22 +1203,25 @@ FUID3            0xf80016           0x000002
 
 Linker script and memory map
 
-LOAD build/XC16_dsPIC33FJ128MC804/production/main.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/system.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/traps.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/user.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/interrupts.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/Uart_1.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/pump.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/pmw.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/autom.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/asserv.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/codeurs.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o
-LOAD build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/main.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/system.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/traps.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/user.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/Uart_1.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/pump.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/pmw.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/autom.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/asserv.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/codeurs.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o
+LOAD build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
                     0x0001                  __MPLAB_BUILD = 0x1
+                    0x0001                  __MPLAB_DEBUG = 0x1
+                    0x0001                  __DEBUG = 0x1
+                    0x0001                  __MPLAB_DEBUGGER_SIMULATOR = 0x1
 LOAD p33FJ128MC804
 LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
                     0xf80000                  __FBS = 0xf80000
@@ -1259,7 +1265,7 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
  *(.handle)
  .handle          0x0002c8          0xc jump_table
  *(.isr*)
- .isr.text        0x0002d4         0x40 build/XC16_dsPIC33FJ128MC804/production/traps.o
+ .isr.text        0x0002d4         0x40 build/XC16_dsPIC33FJ128MC804/debug/traps.o
                   0x0002d4                  __OscillatorFail
                   0x0002da                  __AddressError
                   0x0002e0                  __StackError
@@ -1271,7 +1277,7 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
                   0x000304                  __AltMathError
                   0x00030a                  __AltDMACError
                   0x000310                  __DefaultInterrupt
- .isr.text        0x000314        0x1b4 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+ .isr.text        0x000314        0x1b4 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
                   0x000314                  __T1Interrupt
                   0x000378                  __T2Interrupt
                   0x000380                  __T3Interrupt
@@ -1731,17 +1737,17 @@ usercode
 
 __FBS             0xf80000          0x2
  *(__FBS.sec*)
- __FBS.sec        0xf80000          0x2 /CW/_FBS?c
+ __FBS.sec        0xf80000          0x2 /CW/_FBS0‚b
                   0xf80000                  __FBS.sec
 
 __FSS             0xf80002          0x2
  *(__FSS.sec*)
- __FSS.sec        0xf80002          0x2 /CW/_FSSÄœb
+ __FSS.sec        0xf80002          0x2 /CW/_FSS–Åb
                   0xf80002                  __FSS.sec
 
 __FGS             0xf80004          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf80004          0x2 /CW/_FGSPüb
+ __FGS.sec        0xf80004          0x2 /CW/_FGS “b
                   0xf80004                  __FGS.sec
 
 __FOSCSEL
@@ -1776,21 +1782,21 @@ __FUID3
 
 .debug_info       0x000000      0x10898
  *(.debug_info)
- .debug_info      0x000000        0x3f0 build/XC16_dsPIC33FJ128MC804/production/main.o
- .debug_info      0x0003f0       0x5003 build/XC16_dsPIC33FJ128MC804/production/system.o
- .debug_info      0x0053f3        0x425 build/XC16_dsPIC33FJ128MC804/production/traps.o
- .debug_info      0x005818        0x156 build/XC16_dsPIC33FJ128MC804/production/user.o
- .debug_info      0x00596e       0x1a37 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
- .debug_info      0x0073a5       0x133e build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
- .debug_info      0x0086e3        0xdb4 build/XC16_dsPIC33FJ128MC804/production/Uart_1.o
- .debug_info      0x009497        0x59b build/XC16_dsPIC33FJ128MC804/production/pump.o
- .debug_info      0x009a32        0xb25 build/XC16_dsPIC33FJ128MC804/production/pmw.o
- .debug_info      0x00a557       0x1058 build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o
- .debug_info      0x00b5af        0x1d9 build/XC16_dsPIC33FJ128MC804/production/autom.o
- .debug_info      0x00b788       0x1a92 build/XC16_dsPIC33FJ128MC804/production/asserv.o
- .debug_info      0x00d21a        0x67c build/XC16_dsPIC33FJ128MC804/production/codeurs.o
- .debug_info      0x00d896        0x68a build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o
- .debug_info      0x00df20       0x1014 build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
+ .debug_info      0x000000        0x3f0 build/XC16_dsPIC33FJ128MC804/debug/main.o
+ .debug_info      0x0003f0       0x5003 build/XC16_dsPIC33FJ128MC804/debug/system.o
+ .debug_info      0x0053f3        0x425 build/XC16_dsPIC33FJ128MC804/debug/traps.o
+ .debug_info      0x005818        0x156 build/XC16_dsPIC33FJ128MC804/debug/user.o
+ .debug_info      0x00596e       0x1a37 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
+ .debug_info      0x0073a5       0x133e build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
+ .debug_info      0x0086e3        0xdb4 build/XC16_dsPIC33FJ128MC804/debug/Uart_1.o
+ .debug_info      0x009497        0x59b build/XC16_dsPIC33FJ128MC804/debug/pump.o
+ .debug_info      0x009a32        0xb25 build/XC16_dsPIC33FJ128MC804/debug/pmw.o
+ .debug_info      0x00a557       0x1058 build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o
+ .debug_info      0x00b5af        0x1d9 build/XC16_dsPIC33FJ128MC804/debug/autom.o
+ .debug_info      0x00b788       0x1a92 build/XC16_dsPIC33FJ128MC804/debug/asserv.o
+ .debug_info      0x00d21a        0x67c build/XC16_dsPIC33FJ128MC804/debug/codeurs.o
+ .debug_info      0x00d896        0x68a build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o
+ .debug_info      0x00df20       0x1014 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
  .debug_info      0x00ef34         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
  .debug_info      0x00efc1         0x8b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dgtge.XX_o)
  .debug_info      0x00f04c         0x90 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.XX_o)
@@ -1839,21 +1845,21 @@ __FUID3
 
 .debug_abbrev     0x000000       0x1792
  *(.debug_abbrev)
- .debug_abbrev    0x000000        0x12a build/XC16_dsPIC33FJ128MC804/production/main.o
- .debug_abbrev    0x00012a        0x165 build/XC16_dsPIC33FJ128MC804/production/system.o
- .debug_abbrev    0x00028f         0x8a build/XC16_dsPIC33FJ128MC804/production/traps.o
- .debug_abbrev    0x000319         0x34 build/XC16_dsPIC33FJ128MC804/production/user.o
- .debug_abbrev    0x00034d        0x155 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
- .debug_abbrev    0x0004a2        0x2ca build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
- .debug_abbrev    0x00076c        0x195 build/XC16_dsPIC33FJ128MC804/production/Uart_1.o
- .debug_abbrev    0x000901         0x9d build/XC16_dsPIC33FJ128MC804/production/pump.o
- .debug_abbrev    0x00099e        0x110 build/XC16_dsPIC33FJ128MC804/production/pmw.o
- .debug_abbrev    0x000aae        0x256 build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o
- .debug_abbrev    0x000d04         0x32 build/XC16_dsPIC33FJ128MC804/production/autom.o
- .debug_abbrev    0x000d36        0x2c3 build/XC16_dsPIC33FJ128MC804/production/asserv.o
- .debug_abbrev    0x000ff9        0x14c build/XC16_dsPIC33FJ128MC804/production/codeurs.o
- .debug_abbrev    0x001145        0x127 build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o
- .debug_abbrev    0x00126c        0x1b6 build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
+ .debug_abbrev    0x000000        0x12a build/XC16_dsPIC33FJ128MC804/debug/main.o
+ .debug_abbrev    0x00012a        0x165 build/XC16_dsPIC33FJ128MC804/debug/system.o
+ .debug_abbrev    0x00028f         0x8a build/XC16_dsPIC33FJ128MC804/debug/traps.o
+ .debug_abbrev    0x000319         0x34 build/XC16_dsPIC33FJ128MC804/debug/user.o
+ .debug_abbrev    0x00034d        0x155 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
+ .debug_abbrev    0x0004a2        0x2ca build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
+ .debug_abbrev    0x00076c        0x195 build/XC16_dsPIC33FJ128MC804/debug/Uart_1.o
+ .debug_abbrev    0x000901         0x9d build/XC16_dsPIC33FJ128MC804/debug/pump.o
+ .debug_abbrev    0x00099e        0x110 build/XC16_dsPIC33FJ128MC804/debug/pmw.o
+ .debug_abbrev    0x000aae        0x256 build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o
+ .debug_abbrev    0x000d04         0x32 build/XC16_dsPIC33FJ128MC804/debug/autom.o
+ .debug_abbrev    0x000d36        0x2c3 build/XC16_dsPIC33FJ128MC804/debug/asserv.o
+ .debug_abbrev    0x000ff9        0x14c build/XC16_dsPIC33FJ128MC804/debug/codeurs.o
+ .debug_abbrev    0x001145        0x127 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o
+ .debug_abbrev    0x00126c        0x1b6 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
  .debug_abbrev    0x001422         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
  .debug_abbrev    0x001436         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dgtge.XX_o)
  .debug_abbrev    0x00144a         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.XX_o)
@@ -1899,102 +1905,102 @@ __FUID3
  .debug_abbrev    0x00176a         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.XX_o)
  .debug_abbrev    0x00177e         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(umuldi3.XX_o)
 
-.debug_line       0x000000       0x2c09
+.debug_line       0x000000       0x2c03
  *(.debug_line)
- .debug_line      0x000000        0x11a build/XC16_dsPIC33FJ128MC804/production/main.o
- .debug_line      0x00011a        0x28c build/XC16_dsPIC33FJ128MC804/production/system.o
- .debug_line      0x0003a6        0x110 build/XC16_dsPIC33FJ128MC804/production/traps.o
- .debug_line      0x0004b6         0x34 build/XC16_dsPIC33FJ128MC804/production/user.o
- .debug_line      0x0004ea        0x17f build/XC16_dsPIC33FJ128MC804/production/interrupts.o
- .debug_line      0x000669        0x273 build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
- .debug_line      0x0008dc        0x16f build/XC16_dsPIC33FJ128MC804/production/Uart_1.o
- .debug_line      0x000a4b        0x10e build/XC16_dsPIC33FJ128MC804/production/pump.o
- .debug_line      0x000b59        0x141 build/XC16_dsPIC33FJ128MC804/production/pmw.o
- .debug_line      0x000c9a        0x2ec build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o
- .debug_line      0x000f86         0x7b build/XC16_dsPIC33FJ128MC804/production/autom.o
- .debug_line      0x001001        0x482 build/XC16_dsPIC33FJ128MC804/production/asserv.o
- .debug_line      0x001483        0x129 build/XC16_dsPIC33FJ128MC804/production/codeurs.o
- .debug_line      0x0015ac        0x113 build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o
- .debug_line      0x0016bf        0x266 build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
- .debug_line      0x001925         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
- .debug_line      0x00195f         0x38 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dgtge.XX_o)
- .debug_line      0x001997         0x59 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.XX_o)
- .debug_line      0x0019f0         0x61 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixdfsi.XX_o)
- .debug_line      0x001a51         0x56 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.XX_o)
- .debug_line      0x001aa7         0x69 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixunsdfdi.XX_o)
- .debug_line      0x001b10         0x5e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixunsdfsi.XX_o)
- .debug_line      0x001b6e         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsidf.XX_o)
- .debug_line      0x001ba8         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.XX_o)
- .debug_line      0x001be2         0x3b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatunsidf.XX_o)
- .debug_line      0x001c1d         0x3b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatunsisf.XX_o)
- .debug_line      0x001c58         0x4a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.XX_o)
- .debug_line      0x001ca2         0x66 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(truncdfsf.XX_o)
- .debug_line      0x001d08         0xa2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpadd.XX_o)
- .debug_line      0x001daa        0x100 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpdiv.XX_o)
- .debug_line      0x001eaa         0xde c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpmul.XX_o)
- .debug_line      0x001f88         0xe8 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpsubs.XX_o)
- .debug_line      0x002070        0x136 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.XX_o)
- .debug_line      0x0021a6        0x124 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.XX_o)
- .debug_line      0x0022ca         0xcc c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.XX_o)
- .debug_line      0x002396         0x72 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.XX_o)
- .debug_line      0x002408         0x7a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.XX_o)
- .debug_line      0x002482         0x5e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.XX_o)
- .debug_line      0x0024e0         0x51 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.XX_o)
- .debug_line      0x002531         0x98 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.XX_o)
- .debug_line      0x0025c9         0x79 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.XX_o)
- .debug_line      0x002642         0x5f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dcompare.XX_o)
- .debug_line      0x0026a1         0x45 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dtype.XX_o)
- .debug_line      0x0026e6         0x5c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dunpack.XX_o)
- .debug_line      0x002742         0x53 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dunpack2.XX_o)
- .debug_line      0x002795         0x1a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.XX_o)
- .debug_line      0x0027af         0x47 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdidf.XX_o)
- .debug_line      0x0027f6         0x47 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.XX_o)
- .debug_line      0x00283d         0x68 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundidf.XX_o)
- .debug_line      0x0028a5         0x6c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.XX_o)
- .debug_line      0x002911         0x5a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.XX_o)
- .debug_line      0x00296b         0x5f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpack.XX_o)
- .debug_line      0x0029ca         0x49 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpropagateNaN.XX_o)
- .debug_line      0x002a13         0x43 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsi3.XX_o)
- .debug_line      0x002a56         0x36 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dne.XX_o)
- .debug_line      0x002a8c         0x6f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixdfdi.XX_o)
- .debug_line      0x002afb         0x45 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(udivsi3.XX_o)
- .debug_line      0x002b40         0x38 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(umodsi3.XX_o)
- .debug_line      0x002b78         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.XX_o)
- .debug_line      0x002bb2         0x57 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(umuldi3.XX_o)
+ .debug_line      0x000000        0x114 build/XC16_dsPIC33FJ128MC804/debug/main.o
+ .debug_line      0x000114        0x28c build/XC16_dsPIC33FJ128MC804/debug/system.o
+ .debug_line      0x0003a0        0x110 build/XC16_dsPIC33FJ128MC804/debug/traps.o
+ .debug_line      0x0004b0         0x34 build/XC16_dsPIC33FJ128MC804/debug/user.o
+ .debug_line      0x0004e4        0x17f build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
+ .debug_line      0x000663        0x273 build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
+ .debug_line      0x0008d6        0x16f build/XC16_dsPIC33FJ128MC804/debug/Uart_1.o
+ .debug_line      0x000a45        0x10e build/XC16_dsPIC33FJ128MC804/debug/pump.o
+ .debug_line      0x000b53        0x141 build/XC16_dsPIC33FJ128MC804/debug/pmw.o
+ .debug_line      0x000c94        0x2ec build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o
+ .debug_line      0x000f80         0x7b build/XC16_dsPIC33FJ128MC804/debug/autom.o
+ .debug_line      0x000ffb        0x482 build/XC16_dsPIC33FJ128MC804/debug/asserv.o
+ .debug_line      0x00147d        0x129 build/XC16_dsPIC33FJ128MC804/debug/codeurs.o
+ .debug_line      0x0015a6        0x113 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o
+ .debug_line      0x0016b9        0x266 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
+ .debug_line      0x00191f         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
+ .debug_line      0x001959         0x38 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dgtge.XX_o)
+ .debug_line      0x001991         0x59 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.XX_o)
+ .debug_line      0x0019ea         0x61 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixdfsi.XX_o)
+ .debug_line      0x001a4b         0x56 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.XX_o)
+ .debug_line      0x001aa1         0x69 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixunsdfdi.XX_o)
+ .debug_line      0x001b0a         0x5e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixunsdfsi.XX_o)
+ .debug_line      0x001b68         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsidf.XX_o)
+ .debug_line      0x001ba2         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.XX_o)
+ .debug_line      0x001bdc         0x3b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatunsidf.XX_o)
+ .debug_line      0x001c17         0x3b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatunsisf.XX_o)
+ .debug_line      0x001c52         0x4a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.XX_o)
+ .debug_line      0x001c9c         0x66 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(truncdfsf.XX_o)
+ .debug_line      0x001d02         0xa2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpadd.XX_o)
+ .debug_line      0x001da4        0x100 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpdiv.XX_o)
+ .debug_line      0x001ea4         0xde c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpmul.XX_o)
+ .debug_line      0x001f82         0xe8 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpsubs.XX_o)
+ .debug_line      0x00206a        0x136 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.XX_o)
+ .debug_line      0x0021a0        0x124 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.XX_o)
+ .debug_line      0x0022c4         0xcc c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.XX_o)
+ .debug_line      0x002390         0x72 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.XX_o)
+ .debug_line      0x002402         0x7a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.XX_o)
+ .debug_line      0x00247c         0x5e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.XX_o)
+ .debug_line      0x0024da         0x51 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.XX_o)
+ .debug_line      0x00252b         0x98 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.XX_o)
+ .debug_line      0x0025c3         0x79 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.XX_o)
+ .debug_line      0x00263c         0x5f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dcompare.XX_o)
+ .debug_line      0x00269b         0x45 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dtype.XX_o)
+ .debug_line      0x0026e0         0x5c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dunpack.XX_o)
+ .debug_line      0x00273c         0x53 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dunpack2.XX_o)
+ .debug_line      0x00278f         0x1a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.XX_o)
+ .debug_line      0x0027a9         0x47 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdidf.XX_o)
+ .debug_line      0x0027f0         0x47 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.XX_o)
+ .debug_line      0x002837         0x68 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundidf.XX_o)
+ .debug_line      0x00289f         0x6c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.XX_o)
+ .debug_line      0x00290b         0x5a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.XX_o)
+ .debug_line      0x002965         0x5f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpack.XX_o)
+ .debug_line      0x0029c4         0x49 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dpropagateNaN.XX_o)
+ .debug_line      0x002a0d         0x43 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsi3.XX_o)
+ .debug_line      0x002a50         0x36 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dne.XX_o)
+ .debug_line      0x002a86         0x6f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixdfdi.XX_o)
+ .debug_line      0x002af5         0x45 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(udivsi3.XX_o)
+ .debug_line      0x002b3a         0x38 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(umodsi3.XX_o)
+ .debug_line      0x002b72         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.XX_o)
+ .debug_line      0x002bac         0x57 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(umuldi3.XX_o)
 
 .debug_frame      0x000000       0x1700
  *(.debug_frame)
- .debug_frame     0x000000         0x2e build/XC16_dsPIC33FJ128MC804/production/main.o
- .debug_frame     0x00002e        0x14c build/XC16_dsPIC33FJ128MC804/production/system.o
- .debug_frame     0x00017a        0x132 build/XC16_dsPIC33FJ128MC804/production/traps.o
- .debug_frame     0x0002ac         0x2e build/XC16_dsPIC33FJ128MC804/production/user.o
- .debug_frame     0x0002da        0x218 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
- .debug_frame     0x0004f2        0x3f2 build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
- .debug_frame     0x0008e4         0xb0 build/XC16_dsPIC33FJ128MC804/production/Uart_1.o
- .debug_frame     0x000994        0x14c build/XC16_dsPIC33FJ128MC804/production/pump.o
- .debug_frame     0x000ae0         0x6a build/XC16_dsPIC33FJ128MC804/production/pmw.o
- .debug_frame     0x000b4a        0x382 build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o
- .debug_frame     0x000ecc         0x96 build/XC16_dsPIC33FJ128MC804/production/autom.o
- .debug_frame     0x000f62        0x492 build/XC16_dsPIC33FJ128MC804/production/asserv.o
- .debug_frame     0x0013f4         0x48 build/XC16_dsPIC33FJ128MC804/production/codeurs.o
- .debug_frame     0x00143c         0x96 build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o
- .debug_frame     0x0014d2        0x22e build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
+ .debug_frame     0x000000         0x2e build/XC16_dsPIC33FJ128MC804/debug/main.o
+ .debug_frame     0x00002e        0x14c build/XC16_dsPIC33FJ128MC804/debug/system.o
+ .debug_frame     0x00017a        0x132 build/XC16_dsPIC33FJ128MC804/debug/traps.o
+ .debug_frame     0x0002ac         0x2e build/XC16_dsPIC33FJ128MC804/debug/user.o
+ .debug_frame     0x0002da        0x218 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
+ .debug_frame     0x0004f2        0x3f2 build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
+ .debug_frame     0x0008e4         0xb0 build/XC16_dsPIC33FJ128MC804/debug/Uart_1.o
+ .debug_frame     0x000994        0x14c build/XC16_dsPIC33FJ128MC804/debug/pump.o
+ .debug_frame     0x000ae0         0x6a build/XC16_dsPIC33FJ128MC804/debug/pmw.o
+ .debug_frame     0x000b4a        0x382 build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o
+ .debug_frame     0x000ecc         0x96 build/XC16_dsPIC33FJ128MC804/debug/autom.o
+ .debug_frame     0x000f62        0x492 build/XC16_dsPIC33FJ128MC804/debug/asserv.o
+ .debug_frame     0x0013f4         0x48 build/XC16_dsPIC33FJ128MC804/debug/codeurs.o
+ .debug_frame     0x00143c         0x96 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o
+ .debug_frame     0x0014d2        0x22e build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
 
 .debug_str        0x000000        0xa55
  *(.debug_str)
- .debug_str       0x000000         0x17 build/XC16_dsPIC33FJ128MC804/production/main.o
- .debug_str       0x000017        0x280 build/XC16_dsPIC33FJ128MC804/production/system.o
- .debug_str       0x000297          0xc build/XC16_dsPIC33FJ128MC804/production/traps.o
- .debug_str       0x0002a3        0x100 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
- .debug_str       0x0003a3         0x71 build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
- .debug_str       0x000414         0x60 build/XC16_dsPIC33FJ128MC804/production/Uart_1.o
- .debug_str       0x000474         0x12 build/XC16_dsPIC33FJ128MC804/production/pump.o
- .debug_str       0x000486         0x54 build/XC16_dsPIC33FJ128MC804/production/pmw.o
- .debug_str       0x0004da         0x4a build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o
- .debug_str       0x000524        0x2c3 build/XC16_dsPIC33FJ128MC804/production/asserv.o
- .debug_str       0x0007e7         0x32 build/XC16_dsPIC33FJ128MC804/production/codeurs.o
- .debug_str       0x000819         0x9f build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o
- .debug_str       0x0008b8        0x19d build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
+ .debug_str       0x000000         0x17 build/XC16_dsPIC33FJ128MC804/debug/main.o
+ .debug_str       0x000017        0x280 build/XC16_dsPIC33FJ128MC804/debug/system.o
+ .debug_str       0x000297          0xc build/XC16_dsPIC33FJ128MC804/debug/traps.o
+ .debug_str       0x0002a3        0x100 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
+ .debug_str       0x0003a3         0x71 build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
+ .debug_str       0x000414         0x60 build/XC16_dsPIC33FJ128MC804/debug/Uart_1.o
+ .debug_str       0x000474         0x12 build/XC16_dsPIC33FJ128MC804/debug/pump.o
+ .debug_str       0x000486         0x54 build/XC16_dsPIC33FJ128MC804/debug/pmw.o
+ .debug_str       0x0004da         0x4a build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o
+ .debug_str       0x000524        0x2c3 build/XC16_dsPIC33FJ128MC804/debug/asserv.o
+ .debug_str       0x0007e7         0x32 build/XC16_dsPIC33FJ128MC804/debug/codeurs.o
+ .debug_str       0x000819         0x9f build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o
+ .debug_str       0x0008b8        0x19d build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
 
 .debug_loc
  *(.debug_loc)
@@ -2006,35 +2012,35 @@ __FUID3
                   0x000000       0x1481
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x2f build/XC16_dsPIC33FJ128MC804/production/main.o
+                  0x000000         0x2f build/XC16_dsPIC33FJ128MC804/debug/main.o
  .debug_pubnames
-                  0x00002f        0x111 build/XC16_dsPIC33FJ128MC804/production/system.o
+                  0x00002f        0x111 build/XC16_dsPIC33FJ128MC804/debug/system.o
  .debug_pubnames
-                  0x000140         0xdf build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x000140         0xdf build/XC16_dsPIC33FJ128MC804/debug/traps.o
  .debug_pubnames
-                  0x00021f         0x1e build/XC16_dsPIC33FJ128MC804/production/user.o
+                  0x00021f         0x1e build/XC16_dsPIC33FJ128MC804/debug/user.o
  .debug_pubnames
-                  0x00023d         0xd9 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x00023d         0xd9 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
  .debug_pubnames
-                  0x000316        0x316 build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
+                  0x000316        0x316 build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
  .debug_pubnames
-                  0x00062c         0x87 build/XC16_dsPIC33FJ128MC804/production/Uart_1.o
+                  0x00062c         0x87 build/XC16_dsPIC33FJ128MC804/debug/Uart_1.o
  .debug_pubnames
-                  0x0006b3        0x114 build/XC16_dsPIC33FJ128MC804/production/pump.o
+                  0x0006b3        0x114 build/XC16_dsPIC33FJ128MC804/debug/pump.o
  .debug_pubnames
-                  0x0007c7         0x40 build/XC16_dsPIC33FJ128MC804/production/pmw.o
+                  0x0007c7         0x40 build/XC16_dsPIC33FJ128MC804/debug/pmw.o
  .debug_pubnames
-                  0x000807        0x1a9 build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o
+                  0x000807        0x1a9 build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o
  .debug_pubnames
-                  0x0009b0         0x49 build/XC16_dsPIC33FJ128MC804/production/autom.o
+                  0x0009b0         0x49 build/XC16_dsPIC33FJ128MC804/debug/autom.o
  .debug_pubnames
-                  0x0009f9        0x6be build/XC16_dsPIC33FJ128MC804/production/asserv.o
+                  0x0009f9        0x6be build/XC16_dsPIC33FJ128MC804/debug/asserv.o
  .debug_pubnames
-                  0x0010b7         0x57 build/XC16_dsPIC33FJ128MC804/production/codeurs.o
+                  0x0010b7         0x57 build/XC16_dsPIC33FJ128MC804/debug/codeurs.o
  .debug_pubnames
-                  0x00110e        0x188 build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o
+                  0x00110e        0x188 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o
  .debug_pubnames
-                  0x001296        0x1eb build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
+                  0x001296        0x1eb build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -2042,35 +2048,35 @@ __FUID3
 .debug_aranges    0x000000        0x6e8
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/XC16_dsPIC33FJ128MC804/production/main.o
+                  0x000000         0x18 build/XC16_dsPIC33FJ128MC804/debug/main.o
  .debug_aranges
-                  0x000018         0x18 build/XC16_dsPIC33FJ128MC804/production/system.o
+                  0x000018         0x18 build/XC16_dsPIC33FJ128MC804/debug/system.o
  .debug_aranges
-                  0x000030         0x18 build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x000030         0x18 build/XC16_dsPIC33FJ128MC804/debug/traps.o
  .debug_aranges
-                  0x000048         0x18 build/XC16_dsPIC33FJ128MC804/production/user.o
+                  0x000048         0x18 build/XC16_dsPIC33FJ128MC804/debug/user.o
  .debug_aranges
-                  0x000060         0x18 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x000060         0x18 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
  .debug_aranges
-                  0x000078         0x18 build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
+                  0x000078         0x18 build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
  .debug_aranges
-                  0x000090         0x18 build/XC16_dsPIC33FJ128MC804/production/Uart_1.o
+                  0x000090         0x18 build/XC16_dsPIC33FJ128MC804/debug/Uart_1.o
  .debug_aranges
-                  0x0000a8         0x18 build/XC16_dsPIC33FJ128MC804/production/pump.o
+                  0x0000a8         0x18 build/XC16_dsPIC33FJ128MC804/debug/pump.o
  .debug_aranges
-                  0x0000c0         0x18 build/XC16_dsPIC33FJ128MC804/production/pmw.o
+                  0x0000c0         0x18 build/XC16_dsPIC33FJ128MC804/debug/pmw.o
  .debug_aranges
-                  0x0000d8         0x18 build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o
+                  0x0000d8         0x18 build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o
  .debug_aranges
-                  0x0000f0         0x18 build/XC16_dsPIC33FJ128MC804/production/autom.o
+                  0x0000f0         0x18 build/XC16_dsPIC33FJ128MC804/debug/autom.o
  .debug_aranges
-                  0x000108         0x18 build/XC16_dsPIC33FJ128MC804/production/asserv.o
+                  0x000108         0x18 build/XC16_dsPIC33FJ128MC804/debug/asserv.o
  .debug_aranges
-                  0x000120         0x18 build/XC16_dsPIC33FJ128MC804/production/codeurs.o
+                  0x000120         0x18 build/XC16_dsPIC33FJ128MC804/debug/codeurs.o
  .debug_aranges
-                  0x000138         0x18 build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o
+                  0x000138         0x18 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o
  .debug_aranges
-                  0x000150         0x18 build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
+                  0x000150         0x18 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
  .debug_aranges
                   0x000168         0x20 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
  .debug_aranges
@@ -3271,78 +3277,78 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a
 LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a
 END GROUP
-OUTPUT(dist/XC16_dsPIC33FJ128MC804/production/CarteAutomCDF2025_MC.X.production.elf elf32-pic30)
-LOAD /CW/_FGSPüb
-LOAD /CW/_FSSÄœb
-LOAD /CW/_FBS?c
+OUTPUT(dist/XC16_dsPIC33FJ128MC804/debug/CarteAutomCDF2025_MC.X.debug.elf elf32-pic30)
+LOAD /CW/_FGS “b
+LOAD /CW/_FSS–Åb
+LOAD /CW/_FBS0‚b
 LOAD jump_table
 LOAD data_init
 
 .debug_pubtypes
                   0x0006e8       0x1242
  .debug_pubtypes
-                  0x0006e8         0x78 build/XC16_dsPIC33FJ128MC804/production/main.o
+                  0x0006e8         0x78 build/XC16_dsPIC33FJ128MC804/debug/main.o
  .debug_pubtypes
-                  0x000760        0x730 build/XC16_dsPIC33FJ128MC804/production/system.o
+                  0x000760        0x730 build/XC16_dsPIC33FJ128MC804/debug/system.o
  .debug_pubtypes
-                  0x000e90         0x42 build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x000e90         0x42 build/XC16_dsPIC33FJ128MC804/debug/traps.o
  .debug_pubtypes
-                  0x000ed2         0x12 build/XC16_dsPIC33FJ128MC804/production/user.o
+                  0x000ed2         0x12 build/XC16_dsPIC33FJ128MC804/debug/user.o
  .debug_pubtypes
-                  0x000ee4        0x27d build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x000ee4        0x27d build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
  .debug_pubtypes
-                  0x001161        0x125 build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
+                  0x001161        0x125 build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
  .debug_pubtypes
-                  0x001286        0x11d build/XC16_dsPIC33FJ128MC804/production/Uart_1.o
+                  0x001286        0x11d build/XC16_dsPIC33FJ128MC804/debug/Uart_1.o
  .debug_pubtypes
-                  0x0013a3         0x59 build/XC16_dsPIC33FJ128MC804/production/pump.o
+                  0x0013a3         0x59 build/XC16_dsPIC33FJ128MC804/debug/pump.o
  .debug_pubtypes
-                  0x0013fc        0x114 build/XC16_dsPIC33FJ128MC804/production/pmw.o
+                  0x0013fc        0x114 build/XC16_dsPIC33FJ128MC804/debug/pmw.o
  .debug_pubtypes
-                  0x001510         0xe7 build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o
+                  0x001510         0xe7 build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o
  .debug_pubtypes
-                  0x0015f7         0x12 build/XC16_dsPIC33FJ128MC804/production/autom.o
+                  0x0015f7         0x12 build/XC16_dsPIC33FJ128MC804/debug/autom.o
  .debug_pubtypes
-                  0x001609        0x1be build/XC16_dsPIC33FJ128MC804/production/asserv.o
+                  0x001609        0x1be build/XC16_dsPIC33FJ128MC804/debug/asserv.o
  .debug_pubtypes
-                  0x0017c7         0x98 build/XC16_dsPIC33FJ128MC804/production/codeurs.o
+                  0x0017c7         0x98 build/XC16_dsPIC33FJ128MC804/debug/codeurs.o
  .debug_pubtypes
-                  0x00185f         0x2c build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o
+                  0x00185f         0x2c build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o
  .debug_pubtypes
-                  0x00188b         0x9f build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
+                  0x00188b         0x9f build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
 
 __c30_signature
                   0x00192a        0x2d0
  __c30_signature
-                  0x00192a          0x6 build/XC16_dsPIC33FJ128MC804/production/main.o
+                  0x00192a          0x6 build/XC16_dsPIC33FJ128MC804/debug/main.o
  __c30_signature
-                  0x001930          0x6 build/XC16_dsPIC33FJ128MC804/production/system.o
+                  0x001930          0x6 build/XC16_dsPIC33FJ128MC804/debug/system.o
  __c30_signature
-                  0x001936          0x6 build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x001936          0x6 build/XC16_dsPIC33FJ128MC804/debug/traps.o
  __c30_signature
-                  0x00193c          0x6 build/XC16_dsPIC33FJ128MC804/production/user.o
+                  0x00193c          0x6 build/XC16_dsPIC33FJ128MC804/debug/user.o
  __c30_signature
-                  0x001942          0x6 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x001942          0x6 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
  __c30_signature
-                  0x001948          0x6 build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
+                  0x001948          0x6 build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
  __c30_signature
-                  0x00194e          0x6 build/XC16_dsPIC33FJ128MC804/production/Uart_1.o
+                  0x00194e          0x6 build/XC16_dsPIC33FJ128MC804/debug/Uart_1.o
  __c30_signature
-                  0x001954          0x6 build/XC16_dsPIC33FJ128MC804/production/pump.o
+                  0x001954          0x6 build/XC16_dsPIC33FJ128MC804/debug/pump.o
  __c30_signature
-                  0x00195a          0x6 build/XC16_dsPIC33FJ128MC804/production/pmw.o
+                  0x00195a          0x6 build/XC16_dsPIC33FJ128MC804/debug/pmw.o
  __c30_signature
-                  0x001960          0x6 build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o
+                  0x001960          0x6 build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o
  __c30_signature
-                  0x001966          0x6 build/XC16_dsPIC33FJ128MC804/production/autom.o
+                  0x001966          0x6 build/XC16_dsPIC33FJ128MC804/debug/autom.o
  __c30_signature
-                  0x00196c          0x6 build/XC16_dsPIC33FJ128MC804/production/asserv.o
+                  0x00196c          0x6 build/XC16_dsPIC33FJ128MC804/debug/asserv.o
  __c30_signature
-                  0x001972          0x6 build/XC16_dsPIC33FJ128MC804/production/codeurs.o
+                  0x001972          0x6 build/XC16_dsPIC33FJ128MC804/debug/codeurs.o
  __c30_signature
-                  0x001978          0x6 build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o
+                  0x001978          0x6 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o
  __c30_signature
-                  0x00197e          0x6 build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
+                  0x00197e          0x6 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
  __c30_signature
                   0x001984          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_standard.o)
  __c30_signature
@@ -3557,7 +3563,7 @@ __c30_signature
 __xc_reference_data
 
 .nbss               0x0800        0x3a6
- .nbss              0x0800        0x3a6 build/XC16_dsPIC33FJ128MC804/production/asserv.o
+ .nbss              0x0800        0x3a6 build/XC16_dsPIC33FJ128MC804/debug/asserv.o
                     0x0800                  _ROBOT
                     0x0820                  _PID
                     0x08c0                  _KP_hybride
@@ -3578,7 +3584,7 @@ __xc_reference_data
                     0x0b30                  _FLAG_ASSERV
 
 .ndata              0x0ba6        0x198
- .ndata             0x0ba6        0x110 build/XC16_dsPIC33FJ128MC804/production/asserv.o
+ .ndata             0x0ba6        0x110 build/XC16_dsPIC33FJ128MC804/debug/asserv.o
                     0x0ba6                  _ENTRAXE_MM
                     0x0bae                  _DIAMETRE_ROUE_CODEUSE
                     0x0bb6                  _PERIMETRE_ROUE_MM
@@ -3613,7 +3619,7 @@ __xc_reference_data
                     0x0c9e                  _DCC_ORIENTATION_MIN
                     0x0ca6                  _MAX_ERREUR_INTEGRALLE_V
                     0x0cae                  _MAX_E_INTEGRALLE_BRAKE
- .ndata             0x0cb6         0x88 build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o
+ .ndata             0x0cb6         0x88 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o
                     0x0cb6                  _ASC_VMAX_TICKS
                     0x0cbe                  _ASC_ACCEL_TICKS
                     0x0cc6                  _ASC_DECEL_TICKS
@@ -3633,7 +3639,7 @@ __xc_reference_data
                     0x0d36                  _PIDB_IMAX
 
 .nbss               0x0d3e         0xbc
- .nbss              0x0d3e         0x54 build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
+ .nbss              0x0d3e         0x54 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
                     0x0d3e                  _asc_position_actuelle
                     0x0d46                  _asc_position_consigne
                     0x0d4e                  _asc_distance_totale
@@ -3644,26 +3650,26 @@ __xc_reference_data
                     0x0d64                  _bottomPos
                     0x0d6c                  _topPos
                     0x0d74                  _gHomingState
- .nbss              0x0d92         0x48 build/XC16_dsPIC33FJ128MC804/production/codeurs.o
+ .nbss              0x0d92         0x48 build/XC16_dsPIC33FJ128MC804/debug/codeurs.o
                     0x0d92                  _OVERFLOW_CODEUR
                     0x0d9e                  _POSITION
- .nbss              0x0dda         0x1a build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
+ .nbss              0x0dda         0x1a build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
                     0x0dda                  _CHECK_LIMITATION_COURANT
- .nbss              0x0df4          0x4 build/XC16_dsPIC33FJ128MC804/production/main.o
+ .nbss              0x0df4          0x4 build/XC16_dsPIC33FJ128MC804/debug/main.o
                     0x0df4                  _CPT_TEMPS_MATCH
  .nbss              0x0df8          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.XX_o)
                     0x0df8                  _errno
 
 .bss                0x0dfa        0x382
- .bss               0x0dfa        0x206 build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o
+ .bss               0x0dfa        0x206 build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o
                     0x0dfa                  _serialusM2M
- .bss               0x1000        0x17c build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
+ .bss               0x1000        0x17c build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
                     0x1000                  _ax12
                     0x1010                  _decalage
                     0x10ac                  _position_AX12
 
 .data               0x117c        0x15e
- .data              0x117c         0x78 build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
+ .data              0x117c         0x78 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
                     0x117c                  _asc_pid
                     0x11ac                  _asc_pid_brake
                     0x11dc                  _asc_rampe
@@ -3688,135 +3694,135 @@ __xc_reference_data
 
 .config_JTAGEN    0xf8000e          0x2
  .config_JTAGEN
-                  0xf8000e          0x2 build/XC16_dsPIC33FJ128MC804/production/main.o
+                  0xf8000e          0x2 build/XC16_dsPIC33FJ128MC804/debug/main.o
 
 .config_PWMPIN    0xf8000c          0x2
  .config_PWMPIN
-                  0xf8000c          0x2 build/XC16_dsPIC33FJ128MC804/production/main.o
+                  0xf8000c          0x2 build/XC16_dsPIC33FJ128MC804/debug/main.o
 
 .config_FWDTEN    0xf8000a          0x2
  .config_FWDTEN
-                  0xf8000a          0x2 build/XC16_dsPIC33FJ128MC804/production/main.o
+                  0xf8000a          0x2 build/XC16_dsPIC33FJ128MC804/debug/main.o
 
 .config_FCKSM     0xf80008          0x2
- .config_FCKSM    0xf80008          0x2 build/XC16_dsPIC33FJ128MC804/production/main.o
+ .config_FCKSM    0xf80008          0x2 build/XC16_dsPIC33FJ128MC804/debug/main.o
 
 .config_IESO      0xf80006          0x2
- .config_IESO     0xf80006          0x2 build/XC16_dsPIC33FJ128MC804/production/main.o
+ .config_IESO     0xf80006          0x2 build/XC16_dsPIC33FJ128MC804/debug/main.o
 
 .ivt._OscillatorFail
                   0x000006          0x2
  .ivt._OscillatorFail
-                  0x000006          0x2 build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x000006          0x2 build/XC16_dsPIC33FJ128MC804/debug/traps.o
 
 .ivt._AddressError
                   0x000008          0x2
  .ivt._AddressError
-                  0x000008          0x2 build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x000008          0x2 build/XC16_dsPIC33FJ128MC804/debug/traps.o
 
 .ivt._StackError
                   0x00000a          0x2
  .ivt._StackError
-                  0x00000a          0x2 build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x00000a          0x2 build/XC16_dsPIC33FJ128MC804/debug/traps.o
 
 .ivt._MathError
                   0x00000c          0x2
  .ivt._MathError
-                  0x00000c          0x2 build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x00000c          0x2 build/XC16_dsPIC33FJ128MC804/debug/traps.o
 
 .ivt._DMACError
                   0x00000e          0x2
  .ivt._DMACError
-                  0x00000e          0x2 build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x00000e          0x2 build/XC16_dsPIC33FJ128MC804/debug/traps.o
 
 .aivt._AltOscillatorFail
                   0x000106          0x2
  .aivt._AltOscillatorFail
-                  0x000106          0x2 build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x000106          0x2 build/XC16_dsPIC33FJ128MC804/debug/traps.o
 
 .aivt._AltAddressError
                   0x000108          0x2
  .aivt._AltAddressError
-                  0x000108          0x2 build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x000108          0x2 build/XC16_dsPIC33FJ128MC804/debug/traps.o
 
 .aivt._AltStackError
                   0x00010a          0x2
  .aivt._AltStackError
-                  0x00010a          0x2 build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x00010a          0x2 build/XC16_dsPIC33FJ128MC804/debug/traps.o
 
 .aivt._AltMathError
                   0x00010c          0x2
  .aivt._AltMathError
-                  0x00010c          0x2 build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x00010c          0x2 build/XC16_dsPIC33FJ128MC804/debug/traps.o
 
 .aivt._AltDMACError
                   0x00010e          0x2
  .aivt._AltDMACError
-                  0x00010e          0x2 build/XC16_dsPIC33FJ128MC804/production/traps.o
+                  0x00010e          0x2 build/XC16_dsPIC33FJ128MC804/debug/traps.o
 
 .ivt._T1Interrupt
                   0x00001a          0x2
  .ivt._T1Interrupt
-                  0x00001a          0x2 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x00001a          0x2 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
 
 .ivt._T2Interrupt
                   0x000022          0x2
  .ivt._T2Interrupt
-                  0x000022          0x2 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x000022          0x2 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
 
 .ivt._T3Interrupt
                   0x000024          0x2
  .ivt._T3Interrupt
-                  0x000024          0x2 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x000024          0x2 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
 
 .ivt._T4Interrupt
                   0x00004a          0x2
  .ivt._T4Interrupt
-                  0x00004a          0x2 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x00004a          0x2 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
 
 .ivt._T5Interrupt
                   0x00004c          0x2
  .ivt._T5Interrupt
-                  0x00004c          0x2 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x00004c          0x2 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
 
 .ivt._QEI1Interrupt
                   0x000088          0x2
  .ivt._QEI1Interrupt
-                  0x000088          0x2 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x000088          0x2 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
 
 .ivt._U1RXInterrupt
                   0x00002a          0x2
  .ivt._U1RXInterrupt
-                  0x00002a          0x2 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x00002a          0x2 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
 
 .ivt._U2RXInterrupt
                   0x000050          0x2
  .ivt._U2RXInterrupt
-                  0x000050          0x2 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x000050          0x2 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
 
 .ivt._U2TXInterrupt
                   0x000052          0x2
  .ivt._U2TXInterrupt
-                  0x000052          0x2 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x000052          0x2 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
 
 .ivt._INT1Interrupt
                   0x00003c          0x2
  .ivt._INT1Interrupt
-                  0x00003c          0x2 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x00003c          0x2 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
 
 .ivt._INT2Interrupt
                   0x00004e          0x2
  .ivt._INT2Interrupt
-                  0x00004e          0x2 build/XC16_dsPIC33FJ128MC804/production/interrupts.o
+                  0x00004e          0x2 build/XC16_dsPIC33FJ128MC804/debug/interrupts.o
 
 .const              0xd82e        0x2d2 load address 0x00582e  
- .const             0xd82e        0x25c build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o
- .const             0xda8a         0x50 build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
- .const             0xdada         0x22 build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
- .const             0xdafc          0x4 build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o
+ .const             0xd82e        0x25c build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o
+ .const             0xda8a         0x50 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
+ .const             0xdada         0x22 build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
+ .const             0xdafc          0x4 build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o
 
 .text             0x005b00       0x5294
- .text            0x005b00       0x2644 build/XC16_dsPIC33FJ128MC804/production/asserv.o
+ .text            0x005b00       0x2644 build/XC16_dsPIC33FJ128MC804/debug/asserv.o
                   0x005b30                  _init_flag_asserv
                   0x005c1e                  _init_position_robot
                   0x005cd6                  _init_commande_moteur
@@ -3847,7 +3853,7 @@ __xc_reference_data
                   0x0078b0                  _reglage_PID
                   0x007944                  _fonction_PID
                   0x007e26                  _calcul_position_robot
- .text            0x008144       0x102c build/XC16_dsPIC33FJ128MC804/production/ascenseur_asserv.o
+ .text            0x008144       0x102c build/XC16_dsPIC33FJ128MC804/debug/ascenseur_asserv.o
                   0x008524                  _ascenseurAsservInit
                   0x0085da                  _ascenseurSetConsignePourcent
                   0x00864e                  _ascenseurTask
@@ -3858,7 +3864,7 @@ __xc_reference_data
                   0x008c32                  _ascenseurGetState
                   0x008c3c                  _ascenseurGetHomeState
                   0x008c46                  _debug_autom
- .text            0x009170        0xa48 build/XC16_dsPIC33FJ128MC804/production/gestion_AX12.o
+ .text            0x009170        0xa48 build/XC16_dsPIC33FJ128MC804/debug/gestion_AX12.o
                   0x009170                  _init_decalage_AX12
                   0x009176                  _init_position_AX12
                   0x0091c2                  _convertion_position
@@ -3891,7 +3897,7 @@ __xc_reference_data
                   0x009ada                  _clean_des_erreurs_ax12
                   0x009b4a                  _print_statistique_ax12
                   0x009ba2                  _reinit_alim_ax12
- .text            0x009bb8        0x948 build/XC16_dsPIC33FJ128MC804/production/serialusM2M.o
+ .text            0x009bb8        0x948 build/XC16_dsPIC33FJ128MC804/debug/serialusM2M.o
                   0x009bb8                  _serialusM2M_init
                   0x009bcc                  _serialusM2M_receive
                   0x009c26                  _reset_rx_Buffer
@@ -3912,7 +3918,7 @@ __xc_reference_data
                   0x00a308                  _print_abort
                   0x00a31a                  _reset_overflow_error
                   0x00a32a                  _start_match
- .text            0x00a500        0x5a8 build/XC16_dsPIC33FJ128MC804/production/system.o
+ .text            0x00a500        0x5a8 build/XC16_dsPIC33FJ128MC804/debug/system.o
                   0x00a500                  _init_compteur_temps_match
                   0x00a512                  _init_system
                   0x00a55e                  _config_timer_5ms
@@ -3925,7 +3931,7 @@ __xc_reference_data
                   0x00a6a6                  _ConfigPorts
                   0x00a7d8                  _ConfigInterrupt
                   0x00aa66                  _ConfigInterruptsExternes
- .text            0x00aaa8        0x2ec build/XC16_dsPIC33FJ128MC804/production/ascenseur_params.o
+ .text            0x00aaa8        0x2ec build/XC16_dsPIC33FJ128MC804/debug/ascenseur_params.o
                   0x00aaa8                  _asc_reset_defaults
                   0x00ab1a                  _asc_set_pid
                   0x00abaa                  _asc_get_pid
@@ -3935,28 +3941,28 @@ __xc_reference_data
 .dinit            0x00ad94        0x274
  .dinit           0x00ad94        0x274 data_init
 
-.text             0x00b008        0x70c
- .text            0x00b008        0x240 build/XC16_dsPIC33FJ128MC804/production/Uart_1.o
+.text             0x00b008        0x6e6
+ .text            0x00b008        0x240 build/XC16_dsPIC33FJ128MC804/debug/Uart_1.o
                   0x00b008                  _InitUART
                   0x00b0b6                  _calcul_baud
                   0x00b176                  _modifier_vitesse_com_uart
                   0x00b1a8                  _vider_buffer_reception_uart
                   0x00b1d6                  _PutcUART
                   0x00b220                  _PutsUART
- .text            0x00b248        0x1ea build/XC16_dsPIC33FJ128MC804/production/autom.o
+ .text            0x00b248        0x1ea build/XC16_dsPIC33FJ128MC804/debug/autom.o
                   0x00b248                  _InitAx
                   0x00b276                  _Approch
                   0x00b2f8                  _Hold
                   0x00b354                  _Construct
                   0x00b3f8                  _Drop
- .text            0x00b432        0x192 build/XC16_dsPIC33FJ128MC804/production/pmw.o
+ .text            0x00b432        0x192 build/XC16_dsPIC33FJ128MC804/debug/pmw.o
                   0x00b432                  _ConfigPWM
                   0x00b49a                  _setPWMOutput
                   0x00b518                  _envoit_pwm
- .text            0x00b5c4         0xca build/XC16_dsPIC33FJ128MC804/production/codeurs.o
+ .text            0x00b5c4         0xca build/XC16_dsPIC33FJ128MC804/debug/codeurs.o
                   0x00b5c4                  _ConfigQEI
                   0x00b5f2                  _get_valeur_codeur
- .text            0x00b68e         0x60 build/XC16_dsPIC33FJ128MC804/production/pump.o
+ .text            0x00b68e         0x60 build/XC16_dsPIC33FJ128MC804/debug/pump.o
                   0x00b68e                  _turnOnPump_ARM1
                   0x00b696                  _turnOnPump_ARM2
                   0x00b69e                  _turnOnPump_ARM3
@@ -3969,13 +3975,13 @@ __xc_reference_data
                   0x00b6d6                  _turnOffPump_STOCK1
                   0x00b6de                  _turnOffPump_STOCK2
                   0x00b6e6                  _turnOffPump_STOCK3
- .text            0x00b6ee         0x26 build/XC16_dsPIC33FJ128MC804/production/main.o
-                  0x00b6ee                  _main
 
-.init.delay32     0x00b714         0x1c
- .init.delay32    0x00b714         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32.Meo)
-                  0x00b714                  ___delay32
+.init.delay32     0x00b6ee         0x1c
+ .init.delay32    0x00b6ee         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32.Meo)
+                  0x00b6ee                  ___delay32
 
-.text             0x00b730          0x6
- .text            0x00b730          0x6 build/XC16_dsPIC33FJ128MC804/production/user.o
-                  0x00b730                  _InitApp
+.text             0x00b70a         0x1c
+ .text            0x00b70a         0x16 build/XC16_dsPIC33FJ128MC804/debug/main.o
+                  0x00b70a                  _main
+ .text            0x00b720          0x6 build/XC16_dsPIC33FJ128MC804/debug/user.o
+                  0x00b720                  _InitApp

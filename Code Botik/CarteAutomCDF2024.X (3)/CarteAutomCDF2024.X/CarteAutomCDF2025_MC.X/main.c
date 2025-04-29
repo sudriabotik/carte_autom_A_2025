@@ -106,7 +106,10 @@ int main(int argc, char** argv) {
     while (1) {
         if (gHomingState == HOMING_DONE) {
             
-            ascenseurSetConsignePourcent(55.0);
+            ascenseurSetConsignePourcent(50.0);
+            
+            //ascenseurSetConsignePourcent(60.0);
+            
             
         }
     };

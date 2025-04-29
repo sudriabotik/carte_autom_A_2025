@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/XC16_dsPIC33FJ128MC804/production/CarteAutomCDF2025_MC.X.production.elf">
+  <executable name="dist/XC16_dsPIC33FJ128MC804/debug/CarteAutomCDF2025_MC.X.debug.elf">
     <memory name="data">
       <units>bytes</units>
       <length>16384</length>
@@ -11,8 +11,8 @@
     <memory name="program">
       <units>bytes</units>
       <length>131328</length>
-      <used>69585</used>
-      <free>61743</free>
+      <used>69561</used>
+      <free>61767</free>
     </memory>
   </executable>
 </project>

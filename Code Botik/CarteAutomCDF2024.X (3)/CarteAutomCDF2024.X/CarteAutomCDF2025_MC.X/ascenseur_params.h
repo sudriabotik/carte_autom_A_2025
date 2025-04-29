@@ -16,29 +16,31 @@ extern "C" {
 #endif
 
     /* Valeurs compile-time par défaut */
-#define _ASC_VMAX_TICKS   10000.0
-#define _ASC_ACCEL_TICKS   50.0
-#define _ASC_DECEL_TICKS   50.0
+#define _ASC_VMAX_TICKS   1000.0
+#define _ASC_ACCEL_TICKS   70.0
+#define _ASC_DECEL_TICKS   100.0
 
 #define _ASC_VMIN_TICKS 100
-#define _ASC_DIST_VMIN 2000
+#define _ASC_DIST_VMIN 3000
 #define _ASC_DIST_FINISH 500
 
-#define _HOMING_SPEED     50.0   /* % PWM */
+#define _HOMING_SPEED     40.0   /* % PWM */
 #define _CLAMP_PWM_PID_SPEED 70.0
-#define _CLAMP_PWM_PID_BRAKE 50.0 
+#define _CLAMP_PWM_PID_BRAKE 30.0 
+
 
     /* ----------  PID par défaut (motion) ---------- */
-#define _PID_KP            0.80
-#define _PID_KI            0.020
-#define _PID_KD            0.000
-#define _PID_IMAX          20000.0
+#define _PID_KP            0.5 //0.80
+#define _PID_KI            0.022//0.020
+#define _PID_KD            0.001//0.000
+#define _PID_IMAX          20000.0//20000.0
 
     /* ----------  PID_BRAKE par défaut ------------- */
-#define _PIDB_KP           0.0007
-#define _PIDB_KI           0.0002
-#define _PIDB_KD           0.0
-#define _PIDB_IMAX         100000.0
+#define _PIDB_KP           0.0007 //0.00055
+#define _PIDB_KI           0.08//0.0001
+#define _PIDB_KD           0.00004//0.00003
+#define _PIDB_IMAX         100000.0//100000.0
+
 
 
 

@@ -47,7 +47,7 @@ void ConfigQEI (void)
 	DFLT1CONbits.IMV0	= 0;				// Etat de PA lors d'un INDEX
 	DFLT1CONbits.CEID	= 0;				// Interruption sur erreur compteur desactive
 	DFLT1CONbits.QEOUT	= 1;				// Activation des filtres
-	DFLT1CONbits.QECK	= 0b010;			// Filtre / de 1:4
+	DFLT1CONbits.QECK	= 0b110;			// Filtre / de 1:4
 
 	MAX1CNT			= MAX_CODEUR_D;                 // Limite du compteur codeur
 

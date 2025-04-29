@@ -120,7 +120,59 @@ static double pourcentToTicks(double p) {
     return ptt;
 }
 
-// PID standard pour le déplacement
+// PID standard pour le déplacement avec DT
+
+static double ascenseurPID(double consigne, double mesure) {
+    double erreur = consigne - mesure;
+    // Intégration avec dt
+    asc_pid.erreur_integree += erreur * ASC_TSK_DT_S;
+    asc_pid.erreur_integree = clamp(asc_pid.erreur_integree,
+            -asc_pid.integrale_max,
+            asc_pid.integrale_max);
+    // Dérivée (delta erreur / dt)
+    double derive = (erreur - asc_pid.erreur_precedente) / ASC_TSK_DT_S;
+    asc_pid.erreur_precedente = erreur;
+    // Loi de commande
+    double commande = asc_pid.Kp * erreur
+            + asc_pid.Ki * asc_pid.erreur_integree
+            + asc_pid.Kd * derive;
+    return clamp(commande, -CLAMP_PWM_PID_SPEED, CLAMP_PWM_PID_SPEED);
+}
+
+
+// PID pour le maintien (brake) avec DT
+
+static double ascenseurPID_brake(double consigne, double mesure) {
+    double erreur = consigne - mesure;
+
+    // Intégration avec dt
+    asc_pid_brake.erreur_integree += erreur * ASC_TSK_DT_S;
+    asc_pid_brake.erreur_integree = clamp(asc_pid_brake.erreur_integree,
+            -asc_pid_brake.integrale_max,
+            asc_pid_brake.integrale_max);
+
+    // Dérivée brute / dt
+    double raw_derivative = (erreur - asc_pid_brake.erreur_precedente) / ASC_TSK_DT_S;
+    asc_pid_brake.erreur_precedente = erreur;
+
+    // Filtrage de la dérivée
+    static double filtered_derivative = 0.0;
+    double alpha = 0.05;
+    filtered_derivative = alpha * raw_derivative
+            + (1.0 - alpha) * filtered_derivative;
+
+    // Loi de commande
+    double commande = asc_pid_brake.Kp * erreur
+            + asc_pid_brake.Ki * asc_pid_brake.erreur_integree
+            + asc_pid_brake.Kd * filtered_derivative;
+
+
+
+    return clamp(commande, -CLAMP_PWM_PID_BRAKE, CLAMP_PWM_PID_BRAKE);
+}
+
+/*
+// PID standard pour le déplacement sans DT
 
 static double ascenseurPID(double consigne, double mesure) {
     double erreur = consigne - mesure;
@@ -133,7 +185,7 @@ static double ascenseurPID(double consigne, double mesure) {
 }
 
 
-// PID pour le maintien (brake)
+// PID pour le maintien (brake) sans DT
 
 static double ascenseurPID_brake(double consigne, double mesure) {
     double erreur = consigne - mesure;
@@ -164,7 +216,7 @@ static double ascenseurPID_brake(double consigne, double mesure) {
     //commande=(commande/asc_distance_totale)*100;
     return clamp(commande, -CLAMP_PWM_PID_BRAKE, CLAMP_PWM_PID_BRAKE);
 }
-
+ */
 
 
 
@@ -210,7 +262,7 @@ void ascenseurAsservInit(void) {
 
 void ascenseurSetConsignePourcent(double pourcent) {
     // On ne reprend une nouvelle consigne que si l'ascenseur est immobile
-    if (asc_current_state != ASC_STATE_IDLE && asc_current_state != ASC_STATE_DONE) {
+    if (asc_current_state != ASC_STATE_IDLE && asc_current_state != ASC_STATE_BRAKE) {
         return;
     }
 
@@ -228,6 +280,8 @@ void ascenseurSetConsignePourcent(double pourcent) {
     asc_pid.erreur_integree = 0.0;
     asc_pid.erreur_precedente = 0.0;
     asc_current_state = ASC_STATE_ACCEL;
+    endSwitch1_pressed = false;
+    endSwitch2_pressed = false;
 }
 
 // Tâche à appeler périodiquement (
@@ -251,7 +305,7 @@ void ascenseurTask(void) {
 
             if (compt == 100) {
                 //envoit_pwm(MOTEUR_DROIT, 0.0);
-                asc_current_state = ASC_STATE_BLOCKED;
+                //asc_current_state = ASC_STATE_BLOCKED;
                 //printf("!!! Blocage détecté (endSwitch1=%d, endSwitch2=%d) -> MOTEUR ARRETE\n",
                 //endSwitch1_pressed, endSwitch2_pressed);
                 compt = 0;
@@ -273,8 +327,15 @@ void ascenseurTask(void) {
             break;
         case ASC_STATE_DONE:
         {
+            static double filtered_position = 0.0;
+            
+            double alpha = 1.0;
+            filtered_position = alpha * asc_position_actuelle
+                    + (1.0 - alpha) * filtered_position;
+
+
             // Maintien en position (PID brake)
-            double cmd = ascenseurPID_brake(asc_position_consigne, asc_position_actuelle);
+            double cmd = ascenseurPID_brake(asc_position_consigne, filtered_position);
             envoit_pwm(MOTEUR_DROIT, cmd);
             //printf("ASC_STATE_DONE\n");
             break;
