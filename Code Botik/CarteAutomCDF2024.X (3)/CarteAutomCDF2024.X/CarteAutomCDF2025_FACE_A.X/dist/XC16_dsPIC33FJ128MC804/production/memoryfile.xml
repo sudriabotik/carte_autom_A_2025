@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/XC16_dsPIC33FJ128MC804/production/CarteAutomCDF2025_FACE_A.X.production.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>16384</length>
+      <used>2798</used>
+      <free>13586</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>131328</length>
+      <used>70095</used>
+      <free>61233</free>
+    </memory>
+  </executable>
+</project>
