@@ -18,6 +18,7 @@
       <itemPath>pmw.h</itemPath>
       <itemPath>ascenseur_asserv.h</itemPath>
       <itemPath>ascenseur_params.h</itemPath>
+      <itemPath>debounce.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

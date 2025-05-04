@@ -227,9 +227,7 @@ void __attribute__((__interrupt__, no_auto_psv)) _INT1Interrupt(void) {
 
     // -> Code de gestion du fin de course #1
 
-    endSwitch1_pressed = true;
 }
-
 /**
  * @brief Interruption externe INT2 (RC4/RP20).
  *        D?tecte, par exemple, endSwitch2 sur front montant.
@@ -239,9 +237,7 @@ void __attribute__((__interrupt__, no_auto_psv)) _INT2Interrupt(void) {
     IFS1bits.INT2IF = 0;
     //printf("SWITCH2 PRESSED \n");
 
-
-    // -> Code de gestion du fin de course #2
-    endSwitch2_pressed = true;
+  
 }
 
 

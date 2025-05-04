@@ -8,13 +8,14 @@
 #include "xc.h"
 #include "ascenseur_asserv.h"
 #include "ascenseur_params.h"
+#include "debounce.h"    
 #include "system.h"   // Pour envoit_pwm(), etc.
 #include "pmw.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdint.h>
 
-
+#define DEBOUNCE_NUMBER 100
 #define ASC_TSK_DT_S   0.005      // 5 ms : période d'appel de ascenseurTask()
 
 
@@ -30,6 +31,10 @@ volatile uint16_t compt = 0;
 
 #define DBG_PREFIX "@DBG,"      // facile à reconnaître côté PC
 volatile uint8_t gDebugOn = 1;
+
+/* --------- filtres anti-rebond --------- */
+static debounce_t sw1_db;
+static debounce_t sw2_db;
 
 
 
@@ -93,6 +98,8 @@ static double pourcentToTicks(double p) {
     return ptt;
 }
 
+
+
 // PID standard pour le déplacement avec DT
 
 static double ascenseurPID(double consigne, double mesure) {
@@ -151,6 +158,7 @@ static double ascenseurPID_brake(double consigne, double mesure) {
 // Initialisation de l'asservissement
 
 void ascenseurAsservInit(void) {
+
     asc_current_state = ASC_STATE_IDLE;
 
     /* -- PID motion initialisation -- */
@@ -179,6 +187,9 @@ void ascenseurAsservInit(void) {
     asc_position_consigne = asc_position_actuelle;
 
     asc_current_state = ASC_STATE_IDLE; // immobile au démarrage
+    /* 100 échantillons × 5 ms = 500 ms d?antirebond */
+    debounceInit(&sw1_db, 100, 0); /* INT1 = RC3, repos à 0 */
+    debounceInit(&sw2_db, 100, 0); /* INT2 = RC4, repos à 0 */
 
     homingAscenseurStart(); //lancement homing
 }
@@ -215,7 +226,12 @@ void ascenseurSetConsignePourcent(double pourcent) {
 void ascenseurTask(void) {
 
 
+    /* --- 0) Fins de course : lecture + antirebond --- */
+    bool sw1_raw = PORTCbits.RC3; /* INT1 */
+    bool sw2_raw = PORTCbits.RC4; /* INT2 */
 
+    endSwitch1_pressed = debounceUpdate(&sw1_db, sw1_raw);
+    endSwitch2_pressed = debounceUpdate(&sw2_db, sw2_raw);
     // 1) Lecture de la position
     asc_position_actuelle = ascenseurGetPosition();
     //printf("Pos actuelle: %f, Consigne: %f\n", asc_position_actuelle, asc_position_consigne);
@@ -227,16 +243,12 @@ void ascenseurTask(void) {
 
         if (endSwitch1_pressed || endSwitch2_pressed) {
 
-            compt++;
+            //asc_current_state = ASC_STATE_BLOCKED;
+            printf("!!! Blocage détecté (endSwitch1=%d, endSwitch2=%d) -> MOTEUR ARRETE\n",
+                    endSwitch1_pressed, endSwitch2_pressed);
 
-            if (compt == 50) {
-                
-                asc_current_state = ASC_STATE_BLOCKED;
-                printf("!!! Blocage détecté (endSwitch1=%d, endSwitch2=%d) -> MOTEUR ARRETE\n",
-                        endSwitch1_pressed, endSwitch2_pressed);
-                compt = 0;
-                return;
-            }
+            
+
             // arrêt immédiat du moteur
 
         }
@@ -383,6 +395,16 @@ void homingAscenseurStart(void) {
 // Tâche de homing à appeler périodiquement
 
 void homingAscenseurTask(void) {
+    
+    
+     /* --- 0) Fins de course : lecture + antirebond --- */
+    bool sw1_raw = PORTCbits.RC3; /* INT1 */
+    bool sw2_raw = PORTCbits.RC4; /* INT2 */
+
+    endSwitch1_pressed = debounceUpdate(&sw1_db, sw1_raw);
+    endSwitch2_pressed = debounceUpdate(&sw2_db, sw2_raw);
+    
+    
     switch (gHomingState) {
         case HOMING_IDLE:
             break;
@@ -409,10 +431,13 @@ void homingAscenseurTask(void) {
             break;
         case HOMING_ASCENT:
             if (endSwitch2_pressed) {
-                envoit_pwm(MOTEUR_DROIT, 0.0);
+                
                 // Utilisation du cumul pour mesurer la position absolue de la butée haute
 
                 topPos = POSITION[CODEUR_D].cumul;
+                
+                envoit_pwm(MOTEUR_DROIT, HOMING_SPEED*2); // petit pic pour decoller le moteur du endswitch
+                
                 gHomingState = HOMING_TOP_REACHED;
                 //printf("HOMING_TOP_REACHED\n");
             }
